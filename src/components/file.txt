@@ -1,0 +1,215 @@
+ <Link to="/forgotpassword" className="forgot_password"><p>Forgot password?</p></Link>
+    <p>
+        By siging-in you agree to the terms & conditon of the Use & Sale. Please see our Privacy Notice, our Cookies Notice
+    </p>
+    <Link to='/register'><button className="new_button">Create an Account</button></Link>
+    
+    <div id="recipeCarousel2" className="carousel slide w-100 " data-ride="carousel">
+  
+
+  carousel
+
+   <Carousel className="sd">
+        <Carousel.Item>
+        <Container>
+  <Row>
+    <Col xs={6} md={4}>
+      <img className="img rounded-circle" alt="100x100" src="https://cdn.kqed.org/wp-content/uploads/sites/10/2016/01/RocketSpace64-1440x960.jpg"/>
+    </Col>
+    <Col xs={6} md={4}>
+      <img className="img rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" />
+    </Col>
+    <Col xs={6} md={4}>
+      <img className="img rounded-circle" src="https://media.glassdoor.com/l/8e/56/51/ef/our-high-tech-facilities.jpg" />
+    </Col>
+  </Row>
+</Container>
+</Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=Second slide&bg=282c34"
+            alt="Third slide"
+          />
+      
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=Third slide&bg=20232a"
+            alt="Third slide"
+          />
+      
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    
+
+
+
+
+
+
+
+
+    <div className="container-fluid mt-5"> 
+<div class="row">
+        <div className="col-md-12 mb-4">
+            <div row mx-auto my-auto>
+        <div 
+          id="carouselExampleSlidesOnly" 
+          className="carousel slide" 
+          data-ride="carousel"
+          data-type="multi"
+          data-interval= "3000">
+         <div className="carousel-inner">
+           <div id="test" className="carousel-item inner-repeat active">
+             <div className="col-md-3 col-xs-6">
+               <a href="#">
+                 <img 
+                   src="https://cdn.kqed.org/wp-content/uploads/sites/10/2016/01/RocketSpace64-1440x960.jpg" 
+                   className="img rounded-circle"/>      
+               </a>
+               <p class="carousel-text">Technology Comapny</p>
+             </div>
+           </div>
+           <div id="test" className="carousel-item inner-repeat">
+             <div className="col-xs-6 col-md-3">
+             <a href="#">
+               <img 
+                 src="https://media.glassdoor.com/l/8e/56/51/ef/our-high-tech-facilities.jpg" 
+                 class="img rounded-circle"/>
+             </a>
+             </div>
+           </div>
+           <div id="test" className="carousel-item inner-repeat">
+           <div className="col-md-3 col-xs-6">
+               <a href="#">
+                 <img 
+                   src="https://cdn.kqed.org/wp-content/uploads/sites/10/2016/01/RocketSpace64-1440x960.jpg" 
+                   className="img rounded-circle"/>      
+               </a>
+               <p class="carousel-text">Technology Comapny</p>
+             </div>
+            </div>
+           <div id="test" className="carousel-item inner-repeat">
+           <div className="col-md-3 col-xs-6">
+               <a href="#">
+                 <img 
+                   src="https://cdn.kqed.org/wp-content/uploads/sites/10/2016/01/RocketSpace64-1440x960.jpg" 
+                   className="img rounded-circle"/>      
+               </a>
+               <p class="carousel-text">Technology Comapny</p>
+             </div>
+           </div>
+           <div id="test" className="carousel-item inner-repeat">
+           <div className="col-md-3 col-xs-6">
+               <a href="#">
+                 <img 
+                   src="https://cdn.kqed.org/wp-content/uploads/sites/10/2016/01/RocketSpace64-1440x960.jpg" 
+                   className="img rounded-circle"/>      
+               </a>
+               <p class="carousel-text">Technology Comapny</p>
+             </div>
+           </div>
+           <div id="test" className="carousel-item inner-repeat">
+           <div className="col-md-3 col-xs-6">
+               <a href="#">
+                 <img 
+                   src="https://cdn.kqed.org/wp-content/uploads/sites/10/2016/01/RocketSpace64-1440x960.jpg" 
+                   className="img rounded-circle"/>      
+               </a>
+               <p class="carousel-text">Technology Comapny</p>
+             </div>
+           </div>
+           <div id="test" className="carousel-item inner-repeat">
+             <div className="col-md-3">
+             <a href="#">
+               <img
+                 src="https://img.dailymail.co.uk/i/pix/2007/06_01/Factory080607_468x375.jpg" 
+                 class="img rounded-circle"/>
+             </a>
+             </div>
+           </div>
+           <div id="test" className="carousel-item inner-repeat">
+             <div className="col-md-3">
+             <a href="#">
+               <img
+                 src="https://img.dailymail.co.uk/i/pix/2007/06_01/Factory080607_468x375.jpg" 
+                 class="img rounded-circle"/>
+             </a>
+             </div>
+           </div>
+           </div>
+         </div>
+         </div>
+         </div>
+         </div>
+       </div>  
+
+
+
+       
+    <Modal className="modal"
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+       <h1>
+        Sign In
+    </h1>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+          <div className="login_container">
+      <form onSubmit={Signin}>
+      <label>Email</label><br/>
+        <input 
+        type="text" 
+        placeholder="email"
+        value={email}
+        name="email"
+        onChange ={ (e) => setUser(e.target.value)}
+        /><br/>
+        <label>Pasword</label><br/>
+        <input type="password" placeholder="password"
+        value={password}
+        name="password"
+        onChange ={ (e) => setPassword(e.target.value)}
+        />
+        <button class="login_button"> Sign In</button>
+    </form>
+    </div>
+    </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+        </Modal>
+    )
+
+
+
+
+
+         <div>
+                <img src={EventPic3} alt="pic" className="first"/>
+            </div>
+            <div>
+            <img src={EventPic2} alt="pic" className="pic-abs"/>
+  
+            </div>
+            
+<div>
+    <img src={EventPic} alt="pic" className="pic-fluid"/>
+            </div>
+           
