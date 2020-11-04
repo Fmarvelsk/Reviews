@@ -27,15 +27,19 @@ function Navigation (){
       </NavDropdown>
       <Nav.Link className="mr-3" href="#pricing">Reviews</Nav.Link>
     </Nav>
-    <div className="">
-        <Button className="mr-5">Events</Button>
+    <div className="mr-auto">
+    <a className=" mr-3 login-btn">Events
+      </a>
+      
 
     </div><br/>
+    
     <div class="js-signin-modal-trigger">
-      <button className="mr-3 pl-2 login-btn" href="#0" data-signin="login">Login
-      </button>
-      </div>
-      <Button href="#0" data-signup="signup">Signup</Button>
+      <a className=" mr-3 login-btn" href="#0" data-signin="login">Log in
+      </a>
+      </div><br/>
+      <a className="btn-primary mr-3 login-btn" href="#0" data-signin="login">Sign Up
+      </a>
       
       <div>
       
