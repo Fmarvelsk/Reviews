@@ -1,5 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+
 function Footer() {
     return(
 <div>        
@@ -13,22 +18,19 @@ function Footer() {
           <h6 className="mb-0">Get connected with us on social networks!</h6>
         </div>
         <div className="col-md-6 col-lg-7 text-center text-md-right">
-          <a className="fb-ic">
-            <FacebookIcon className="fabc"/>
-          </a>
-          <a className="tw-ic">
-            <i className="fab fa-twitter white-text mr-4"> </i>
-          </a>
-          <a className="gplus-ic">
-            <i className="fab fa-google-plus-g white-text mr-4"> </i>
-          </a>
-          <a className="li-ic">
-            <i className="fab fa-linkedin-in white-text mr-4"> </i>
-          </a>
-          <a className="ins-ic">
-            <i className="fab fa-instagram white-text"> </i>
-          </a>
-
+          <Link>
+            <FacebookIcon className="fabc mr-4"/>
+          </Link>
+          <Link>
+            <TwitterIcon className="fabt mr-4"/>
+          </Link>
+          <Link>
+            <InstagramIcon className="fabi mr-4"/>
+          </Link>
+          <Link>
+            <WhatsAppIcon className="fabw mr-4"/>
+          </Link>
+          
         </div>
 
       </div>
