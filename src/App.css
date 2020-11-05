@@ -159,13 +159,12 @@ line-height: 21px;
   padding-right: 20px;
   padding-left: 20px;
 }
-.hr-style {
-  width: 60px;
-  background-color: currentcolor;
-}
 .footer-color {
-  background-color: #d7d2d2a6;
+  background-color: #E3E2E2;
   color:black;
+}
+.nice {
+  text-decoration: underline;
 }
 .color-dark {
   background-color: #1c2331 !important;
@@ -190,7 +189,7 @@ ol, ul {
   justify-content: center;
 }
 .page-footer {
-  background-color:#e7e7e7;
+  background: linear-gradient(180deg, #FFFFFF 0%, #E3E2E2 38.46%, #AEAAAA 100%);;
 }
 .font-color {
   color: #01579B;
@@ -451,12 +450,33 @@ color: #ffffff;
   font-style: italic;
 }
 .searchpos{
-  width: 45%;
+  width: 48%;
   position: absolute;
   left:30%;
-  top: 70px;
+  top: 60px;
   padding: 20px;
 
+}
+.carp-color {
+  color: coral;
+}
+.lift {
+  color: aqua;
+}
+.screw {
+  color:rgb(185, 152, 152)
+}
+.home-col {
+  color: rgb(177, 235, 177);
+}
+.phone-col {
+  color: gold;
+}
+.rescolor {
+  color: silver;
+}
+.drivecar {
+  color: #ecec1d;
 }
 .imagecaption > h3 {
   font-family: 'Aladin';
