@@ -1,6 +1,10 @@
 
 a {
-  color: #2f889a;
+  color: #ffffff !important;
   text-decoration: none;
+  
 }
 
+.a-color {
+  color: #007bff !important;
+}

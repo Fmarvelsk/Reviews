@@ -12,7 +12,7 @@ import Login from './Login';
 function Navigation (){
     return(
         <>
-    <Navbar className="bg" variant="dark" expand="lg">
+    <Navbar className="bg" variant="dark" expand="lg" fixed="top">
     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
      <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
@@ -34,8 +34,8 @@ function Navigation (){
 
     </div><br/>
     
-    <div class="">
-      <a className=" mr-3 login-btn" href="#0">Log in
+    <div className="">
+      <a className=" mr-3 log-btn" href="#0">Login
       </a>
       </div><br/>
       <a className="btn-primary mr-3 login-btn" href="#0">Sign Up

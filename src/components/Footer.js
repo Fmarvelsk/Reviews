@@ -1,5 +1,5 @@
 import React from 'react';
-
+import FacebookIcon from '@material-ui/icons/Facebook';
 function Footer() {
     return(
 <div>        
@@ -14,7 +14,7 @@ function Footer() {
         </div>
         <div className="col-md-6 col-lg-7 text-center text-md-right">
           <a className="fb-ic">
-            <i className="fab fa-facebook-f white-text mr-4"> </i>
+            <FacebookIcon className="fabc"/>
           </a>
           <a className="tw-ic">
             <i className="fab fa-twitter white-text mr-4"> </i>
@@ -44,20 +44,20 @@ function Footer() {
         <h6 className="text-uppercase font-weight-bold">About</h6>
         <hr className="mb-4 mt-0 d-inline-block mx-auto hr-style"/>
         <p>
-          <a href="#!">About US</a>
+          <a className="a-color" href="#!">About US</a>
         </p>
         <p>
-          <a href="#!">Contact</a>
+          <a className="a-color" href="#!">Contact</a>
         </p>
         <p>
-          <a href="#!">Privacy Policy</a>
+          <a className="a-color" href="#!">Privacy Policy</a>
         </p>
         <p>
-          <a href="#!">Terms and Conditions</a>
+          <a className="a-color" href="#!">Terms and Conditions</a>
         </p>
         
         <p>
-          <a href="#!">Guidelines for reviwers</a>
+          <a className="a-color" href="#!">Guidelines for reviwers</a>
         </p>
 
 
@@ -67,20 +67,20 @@ function Footer() {
         <h6 className="text-uppercase font-weight-bold">Discover</h6>
         <hr className="mb-4 mt-0 d-inline-block mx-auto hr-style"/>
         <p>
-          <a href="#!">Categories</a>
+          <a className="a-color" href="#!">Categories</a>
         </p>
         <p>
-          <a href="#!">Events</a>
+          <a className="a-color" href="#!">Events</a>
         </p>
         <p>
-          <a href="#!">Support</a>
+          <a className="a-color" href="#!">Support</a>
         </p>
         <p>
-          <a href="#!">Developers</a>
+          <a className="a-color" href="#!">Developers</a>
         </p>
 
         <p>
-          <a href="#!">API &amp; Documentation</a>
+          <a className="a-color" href="#!">API &amp; Documentation</a>
         </p>
 
       </div>
@@ -89,16 +89,16 @@ function Footer() {
         <h6 className="text-uppercase font-weight-bold">For Business</h6>
         <hr className="mb-4 mt-0 d-inline-block mx-auto hr-style"/>
         <p>
-          <a href="#!">Our Brands</a>
+          <a className="a-color" href="#!">Our Brands</a>
         </p>
         <p>
-          <a href="#!">Plans &amp; Pricing</a>
+          <a className="a-color" href="#!">Plans &amp; Pricing</a>
         </p>
         <p>
-          <a href="#!">Advertise with us</a>
+          <a className="a-color" href="#!">Advertise with us</a>
         </p>
         <p>
-          <a href="#!">Business News Daily</a>
+          <a className="a-color" href="#!">Business News Daily</a>
         </p>
 
       </div>
@@ -121,7 +121,7 @@ function Footer() {
   
   </div>
   <div className="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/">ConsumerReviews</a>
+    <a className="a-color" href="https://mdbootstrap.com/">ConsumerReviews</a>
   </div>
 </footer>
 </div>
