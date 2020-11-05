@@ -34,11 +34,11 @@ function Navigation (){
 
     </div><br/>
     
-    <div class="js-signin-modal-trigger">
-      <a className=" mr-3 login-btn" href="#0" data-signin="login">Log in
+    <div class="">
+      <a className=" mr-3 login-btn" href="#0">Log in
       </a>
       </div><br/>
-      <a className="btn-primary mr-3 login-btn" href="#0" data-signin="login">Sign Up
+      <a className="btn-primary mr-3 login-btn" href="#0">Sign Up
       </a>
       
       <div>
