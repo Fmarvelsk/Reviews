@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { Link } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import Logo from './Logo'
+import LoginForm from './LoginForm'
 
 function Login(props) {
 	const { email, setUser } = useState();
@@ -11,24 +13,26 @@ function Login(props) {
 		e.preventDefault();
 	};
 	return (
-		<Form>
-			<Form.Group controlId="formBasicEmail">
-				<Form.Label>Email address</Form.Label>
-				<Form.Control type="email" placeholder="Enter email" />
-				<Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
-			</Form.Group>
+		<Modal show={props.show} onHide={props.handleClose}>
+		<Modal.Dialog style={{margin: 0}}>
+			<Modal.Header closeButton>
+				<Logo />
+			</Modal.Header>
 
-			<Form.Group controlId="formBasicPassword">
-				<Form.Label>Password</Form.Label>
-				<Form.Control type="password" placeholder="Password" />
-			</Form.Group>
-			<Form.Group controlId="formBasicCheckbox">
-				<Form.Check type="checkbox" label="Check me out" />
-			</Form.Group>
-			<Button variant="primary" type="submit">
-				Submit
-			</Button>
-		</Form>
+			<Modal.Body>
+				{/* <Route exact path={`${path}/login`} component={LoginForm}/>
+							<Route exact path={`${path}/signup`} component={SignUp}/> */}
+				<LoginForm/>
+				{/* <SignUp /> */}
+			</Modal.Body>
+
+			<Modal.Footer style={{ display: 'flex', justifyContent: 'center' }}>
+				<Form.Group controlId="formBasicCheckbox">
+					<Form.Check type="checkbox" label="Some BS over here" />
+				</Form.Group>
+			</Modal.Footer>
+		</Modal.Dialog>
+		</Modal>
 	);
 }
 export default Login;

@@ -5,10 +5,24 @@ import { Nav } from 'react-bootstrap';
 //import { FormControl } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
-import Login from './Login';
+import AuthPage from './AuthPage'
+// import Login from './Login';
 //import Signup from './Signup';
+import { showModalLogin, showModalSignup } from '../store/actions/authModal'
+import { useDispatch } from 'react-redux'
 
 function Navigation() {
+
+	const dispatch = useDispatch()
+
+	const showModalLoginHandler = () => {
+		dispatch(showModalLogin())
+	}
+
+	const showModalSignupHandler = () => {
+		dispatch(showModalSignup())
+	}
+
 	return (
 		<>
 			<Navbar className="bg" variant="dark" expand="lg" fixed="top">
@@ -36,20 +50,19 @@ function Navigation() {
 					<br />
 
 					<div className="">
-						<a className=" mr-3 log-btn" href="#0">
+						<Nav.Item className=" mr-3 log-btn" onClick={showModalLoginHandler}>
 							Login
-						</a>
+						</Nav.Item>
 					</div>
 					<br />
-					<a className="btn-primary mr-3 login-btn" href="#0">
+					<Nav.Item className="btn-primary mr-3 login-btn" onClick={showModalSignupHandler}>
 						Sign Up
-					</a>
+					</Nav.Item>
 
 					<div></div>
 				</Navbar.Collapse>
 			</Navbar>
 
-			<Login />
 		</>
 	);
 }

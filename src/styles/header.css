@@ -1,0 +1,36 @@
+.background-image{
+    background: url('../image/photoEvent4.jpg') no-repeat;
+    background-position-x: 80%;
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 650px){
+    .background-image{
+        background-position: 75%;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .background-image{
+        background-position: 65%;
+        backdrop-filter: 25px;
+        /* background-size: contain; */
+    }
+}
+
+.custom-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchpos{
+    min-width: 18rem;
+    left: 50%;
+    top: 120%;
+    transform: translateX(-50%);
+
+}

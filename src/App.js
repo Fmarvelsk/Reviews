@@ -5,7 +5,17 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import './App.css';
 import Landing from './components/Landing';
 import Logo from './components/Logo';
-import LoginForm from './components/LoginForm';
+import Login from './components/Login';
+import SignUp from './components/Signup';
+import { BrowserRouter as Router, Route, Switch, useRouteMatch } from 'react-router-dom';
+
+import Footer from './components/Footer';
+import EventHeader from './components/Events';
+import Profile from './components/Profile';
+import WriteReview from './components/WriteReviews';
+import Nav from './components/EventNav'
+import Navbar from './components/Navbar'
+import AuthPage from './components/AuthPage'
 
 function App() {
 	useEffect(() => {
@@ -25,45 +35,29 @@ function App() {
 				next.children(':first-child').clone().appendTo($(this));
 			}
 		});
-	});
+	}, []);
 	return (
-		// <Router>
-		// 	<Switch>
-		// 		<Route exact path="/">
-		// 			<Landing/>
-		// 		</Route>
-		// 		<Route path="/Events">
-		// 			<Nav />
-		// 			<EventHeader />
-		// 		</Route>
-		// 		<Route path="/profile">
-		// 			<Navbar />
-		// 			<Profile />
-		// 		</Route>
-		// 		<Route path="/writeReview">
-		// 			<Navbar />
-		// 			<WriteReview />
-		// 		</Route>
-		// 	</Switch>
-		//   <Footer />
-		// </Router>
-		<Modal.Dialog>
-			<Modal.Header closeButton>
-				<Logo />
-			</Modal.Header>
-
-			<Modal.Body>
-      {/* Switch here between login and sign up */}
-				<Modal.Title id="login-modal-title">Join millions of people sharing their experience</Modal.Title>
-				<LoginForm />
-			</Modal.Body>
-
-			<Modal.Footer style={{display: 'flex', justifyContent: 'center'}}>
-				<Form.Group controlId="formBasicCheckbox">
-					<Form.Check type="checkbox" label="Some BS over here" />
-				</Form.Group>
-			</Modal.Footer>
-		</Modal.Dialog>
+		<Router>
+			<Switch>
+				<Route path="/home">
+					<Landing />
+				</Route>
+				<Route path="/Events">
+					<Nav />
+					<EventHeader />
+				</Route>
+				<Route path="/profile">
+					<Navbar />
+					<Profile />
+				</Route>
+				<Route path="/writeReview">
+					<Navbar />
+					<WriteReview />
+				</Route>
+			</Switch>
+			<AuthPage/>
+			<Footer />
+		</Router>
 	);
 }
 
