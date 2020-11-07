@@ -108,10 +108,17 @@ line-height: 21px;
   border-radius: .55rem;
   
 }
+.dtext {
+  color: #212529 !important;
+}
 .dl{
   position: absolute;
-  top: 35px;
-  right: 0;
+  top: 20px;
+  right: -20px;
+  height: 39px;
+  color: #E3E2E2;
+  border-radius: 0px 15px 15px 0px;
+  background: #000032;
 }
 .navbar-dark .navbar-nav .active>.nav-link, .nav-link.active, .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
   color: #ffffff !important;
@@ -217,7 +224,7 @@ ol, ul {
  color:black
 }
 .form-control {
-  border-radius: 2.25rem !important;
+  border-radius: 15px 0px 0px 15px !important;
   padding: 0.375rem 3.75rem 0.375rem 0.75rem !important; 
 }
 .margin-row {
@@ -468,6 +475,7 @@ color: #ffffff;
 }
 .home-col {
   color: rgb(177, 235, 177);
+  
 }
 .phone-col {
   color: gold;

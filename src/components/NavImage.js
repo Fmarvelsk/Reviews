@@ -17,10 +17,10 @@ function NavRes(){
         </Breadcrumb.Item>
         <Breadcrumb.Item><BuildIcon className="screw"/>Plumbing</Breadcrumb.Item>
         <Breadcrumb.Item><EventSeatIcon className="carp-color"/> Carpentry</Breadcrumb.Item>
+      
         <Breadcrumb.Item><HomeWorkIcon className="home-col"/>Home services</Breadcrumb.Item>
         <Breadcrumb.Item><PhonelinkEraseIcon className="phone-col"/>Phone repair</Breadcrumb.Item>
         <Breadcrumb.Item><FitnessCenterIcon className="lift"/>Gyms</Breadcrumb.Item>
-    
     
     
       </Breadcrumb>

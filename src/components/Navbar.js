@@ -12,18 +12,18 @@ import Login from './Login';
 function Navigation (){
     return(
         <>
-    <Navbar className="bg" variant="dark" expand="lg" fixed="top">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar className="bg" variant="dark" expand="lg" sticky="top">
+    <Navbar.Brand href="#home"></Navbar.Brand>
      <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto mr-auto navbar-color">
       <Nav.Link className="mr-3" href="#home">Home</Nav.Link>
       <NavDropdown className="mr-3" title="Caterigories" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Item className="dtext" href="#action/3.1">Action</NavDropdown.Item>
+        <NavDropdown.Item className="dtext" href="#action/3.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item className="dtext" href="#action/3.3">Something</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        <NavDropdown.Item  className="dtext" href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown>
       <Nav.Link className="mr-3" href="#pricing">Reviews</Nav.Link>
     </Nav>
