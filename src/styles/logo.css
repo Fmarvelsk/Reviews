@@ -1,0 +1,47 @@
+
+.c-logo{
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    max-height: 6rem;
+    width: 100%;
+    max-width: 60%;
+  }
+  
+  .c-logo-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: .2rem
+  }
+  
+  .c-logo-image{
+    height: 3rem;
+    width: 3rem;
+    min-height: 3rem;
+    min-width: 3rem;
+    background-color: rgb(21, 81, 131);
+  }
+  
+  .c-logo *{
+      color: rgb(21, 81, 131)
+  
+  }
+  
+  .c-logo-top{
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-family: sans-serif;
+  }
+  
+  .c-logo-top span{
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .c-logo-bottom{
+    font-style: italic;
+    font-size: .8rem;
+    color: black;
+    margin-top: -.5rem;
+    padding-left: 1.5rem;
+  }
