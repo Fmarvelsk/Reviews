@@ -7,14 +7,14 @@ import { Form, FormControl } from 'react-bootstrap';
 function NavEvent () {
     return (
      <Navbar className="bgEvent" variant="light" bg="light" expand="lg">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand className="dark-color" href="#home">Navbar</Navbar.Brand>
      <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto mr-auto navbar-color">
       <br/>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Search</Button>
+      <Button  variant="outline-dark">Search</Button>
     </Form>
       </Nav>
     <Nav.Link className="dark-color mr-3" href="#home">Reviews</Nav.Link>

@@ -221,7 +221,7 @@ ol, ul {
   width: 20%;
 }
 .dark-color {
- color:black
+ color:black !important;
 }
 .form-control {
   border-radius: 15px 0px 0px 15px !important;
