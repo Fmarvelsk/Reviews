@@ -7,30 +7,46 @@ function ProfileInfo(){
         sortBy({ value : e.target.value})
     }
     return (
-        <div className="tab">
-<Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
-    <div className="profile-name">
-    <h3>hello</h3>
+         <div className="tab mt-5">
+    <div className="profile-name test text-center">
+   <div className="profile-name">
+    <h3>Wade Warren</h3>
+    <p>Boston, Massachusetts</p>
     </div>
+    <div className="lo">
+    <p> Rating </p>
+    </div>
+    </div>
+    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
   <Row className="profile-margin margin-row">
-    <Col sm={4} md={4} className="col-color">
-    <Image className="rounded-image"src="https://cdn.onlinewebfonts.com/svg/img_568656.png" roundedCircle />
-      <ListGroup className="review-group">
-        <ListGroup.Item action href="#link1">
-          Link 1
+    <Col sm={8} md={4} xl={4} className="col-color">
+ <Image className="rounded-image"src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx3Zmwl93kSrhaxf7so-usNdWGpNc64aUanA&usqp=CAU" roundedCircle />
+      <ListGroup className="review-grop">
+        <ListGroup.Item className="change" action href="#link1">
+          Profile Overview
         </ListGroup.Item>
-        <ListGroup.Item action href="#link2">
+        <ListGroup.Item className="change" action href="#link2">
+          Reviews
+        </ListGroup.Item>
+        <ListGroup.Item className="change" action href="#link3">
+          Link 3
+        </ListGroup.Item>
+        <ListGroup.Item className="change" action href="#">
           Link 2
         </ListGroup.Item>
+        <ListGroup.Item className="change" action href="#">
+          Link 2
+        </ListGroup.Item>
+      
       </ListGroup>
     </Col>
-    <Col sm={8} md={8} className="col-8-color">
+    <Col sm={8} md={7} xl={7} className="col-8-color">
       <Tab.Content className="review-content">
         <Tab.Pane eventKey="#link1">
           <p>This is one</p>
         </Tab.Pane>
         <Tab.Pane eventKey="#link2">
-            <h3>Reviews</h3>
+            <h3 className="my-color">Reviews</h3>
             <div className="sort">
                 <label>Sort by Rating 
             <select value={sort} onChange={handleChange}>
@@ -42,11 +58,16 @@ function ProfileInfo(){
   </div>
             <Reviews/>
           </Tab.Pane>
+          <Tab.Pane eventKey="#link3">
+
+          </Tab.Pane>
       </Tab.Content>
     </Col>
   </Row>
 </Tab.Container>
-            </div>
+
+</div> 
+            
     )
 }
 

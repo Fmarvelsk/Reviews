@@ -7,7 +7,7 @@ import '../styles/header.css';
 function Header() {
 	return (
 		<>
-			<Jumbotron className="background-image" fluid>
+			<Jumbotron className="background-image mt-5" fluid>
 				{/* <Image src={ImgHome} fluid /> */}
 				<Container>
 					<div className="imagecaption">

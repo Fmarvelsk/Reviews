@@ -11,12 +11,12 @@ function ReviewBusiness (){
                     <img className="review-img" src={Photo1} alt="business"/>
                     <h3 className="def">Grand Palais</h3> 
                        
-                    <div className="space">
+                    <div className="space mt-5">
                         <div className="mt-3">
                         <h4>Rate your experience</h4>
                         <p>Rating</p>
 
-                        <p className="tell"><b>Tell your story</b></p><hr className="tell-hr"/>
+                        <p className="tell v"><b>Tell your story</b></p><br/>
                         <textarea placeholder="Tell us your story, Explain what happened and avoid using offensive words. Keep your feedback honest, helpful and constructive.">
                             
                         </textarea>
@@ -26,9 +26,10 @@ function ReviewBusiness (){
                     <button className="post-btn mt-5">Post</button>
                     </div>
                 </Col>
-                <Col md={4} xs={12} className="recent-review">
-                   <p className="text-center mt-3">Recent views<hr className="underline"/></p>
+                <Col md={4} xs={12} className="recent-review mt-5">
+                   <p className="text-center mt-3 v">Recent views</p>
                    <Recent/>
+                    <Recent/>
                     <Recent/>
                     <Recent/>
                 </Col>

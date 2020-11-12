@@ -3,11 +3,9 @@ import Navbar from './Navbar';
 import Header from './Header';
 import Card from './Cardgrid';
 import Carousel from './Carousel';
-// import Footer from './Footer';
+import Footer from './Footer';
 // import EventHeader from './Events';
 // import Profile from './Profile';
-// import WriteReview from './WriteReviews';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Photo1 from '../image/photo580.jpg';
 import Photo2 from '../image/photo5802.jpg';
@@ -73,6 +71,7 @@ export default function Landing() {
 				</div>
 				<Carousel />
 			</div>
+			<Footer/>
 			<Switch>
 				<Route path={`${path}/:login`} component={Login} />
 				<Route path={`${path}/signup`} component={SignUp} />

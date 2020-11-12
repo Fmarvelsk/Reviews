@@ -19,6 +19,33 @@ import AuthPage from './components/AuthPage'
 
 function App() {
 	useEffect(() => {
+		$(function() {
+
+			$(".progress-circle").each(function() {
+		  
+			  var value = $(this).attr('data-value');
+			  var left = $(this).find('.progress-circle-left .progress-circle-bar');
+			  var right = $(this).find('.progress-circle-right .progress-circle-bar');
+		  
+			  if (value > 0) {
+				if (value <= 50) {
+				  right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+				} else {
+				  right.css('transform', 'rotate(180deg)')
+				  left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+				}
+			  }
+		  
+			})
+		  
+			function percentageToDegrees(percentage) {
+		  
+			  return percentage / 100 * 360
+		  
+			}
+		  
+		  });
+		  
 		$('.carousel .carousel-item').each(function () {
 			var next = $(this).next();
 			if (!next.length) {
@@ -39,7 +66,7 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/home">
+				<Route exact path="/">
 					<Landing />
 				</Route>
 				<Route path="/Events">
@@ -56,7 +83,7 @@ function App() {
 				</Route>
 			</Switch>
 			<AuthPage/>
-			<Footer />
+			
 		</Router>
 	);
 }
