@@ -16,10 +16,11 @@ import WriteReview from './components/WriteReviews';
 import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
+import BusinessPage from './components/BusinessPage'
 
 function App() {
 	useEffect(() => {
-		$('.carousel .carousel-item').each(function () {
+		$('#recipeCarousel2 .carousel-item').each(function () {
 			var next = $(this).next();
 			if (!next.length) {
 				next = $(this).siblings(':first');
@@ -39,8 +40,9 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/home">
+				<Route exact path="/">
 					<Landing />
+					<Footer/>
 				</Route>
 				<Route path="/Events">
 					<Nav />
@@ -54,9 +56,12 @@ function App() {
 					<Navbar />
 					<WriteReview />
 				</Route>
+				<Route path="/business">
+					<Navbar />
+					<BusinessPage/>
+				</Route>
 			</Switch>
 			<AuthPage/>
-			<Footer />
 		</Router>
 	);
 }
