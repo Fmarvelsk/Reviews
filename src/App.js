@@ -13,67 +13,41 @@ import Footer from './components/Footer';
 import EventHeader from './components/Events';
 import Profile from './components/Profile';
 import WriteReview from './components/WriteReviews';
-import Nav from './components/EventNav'
-import Navbar from './components/Navbar'
-import AuthPage from './components/AuthPage'
-import BusinessPage from './components/BusinessPage'
+import Nav from './components/EventNav';
+import Navbar from './components/Navbar';
+import AuthPage from './components/AuthPage';
+import BusinessPage from './components/BusinessPage';
 
 function App() {
 	useEffect(() => {
-<<<<<<< HEAD
-		$('#recipeCarousel2 .carousel-item').each(function () {
-=======
-		$(function() {
+		$(function () {
+			$('#recipeCarousel2 .carousel-item').each(function () {
+				var value = $(this).attr('data-value');
+				var left = $(this).find('.progress-circle-left .progress-circle-bar');
+				var right = $(this).find('.progress-circle-right .progress-circle-bar');
 
-			$(".progress-circle").each(function() {
-		  
-			  var value = $(this).attr('data-value');
-			  var left = $(this).find('.progress-circle-left .progress-circle-bar');
-			  var right = $(this).find('.progress-circle-right .progress-circle-bar');
-		  
-			  if (value > 0) {
-				if (value <= 50) {
-				  right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
-				} else {
-				  right.css('transform', 'rotate(180deg)')
-				  left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+				if (value > 0) {
+					if (value <= 50) {
+						right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)');
+					} else {
+						right.css('transform', 'rotate(180deg)');
+						left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)');
+					}
 				}
-			  }
-		  
-			})
-		  
-			function percentageToDegrees(percentage) {
-		  
-			  return percentage / 100 * 360
-		  
-			}
-		  
-		  });
-		  
-		$('.carousel .carousel-item').each(function () {
->>>>>>> af484ca2038af407ccd496ab20c01126d0b3b9f6
-			var next = $(this).next();
-			if (!next.length) {
-				next = $(this).siblings(':first');
-			}
-			next.children(':first-child').clone().appendTo($(this));
-
-			for (var i = 0; i < 4; i++) {
-				next = next.next();
-				if (!next.length) {
-					next = $(this).siblings(':first');
-				}
-
-				next.children(':first-child').clone().appendTo($(this));
-			}
+			});
 		});
 	}, []);
+
+	function percentageToDegrees(percentage) {
+		return (percentage / 100) * 360;
+	}
+
 	return (
 		<Router>
 			<Switch>
 				<Route exact path="/">
 					<Landing />
-					<Footer/>
+					<Footer />
 				</Route>
 				<Route path="/Events">
 					<Nav />
@@ -89,14 +63,10 @@ function App() {
 				</Route>
 				<Route path="/business">
 					<Navbar />
-					<BusinessPage/>
+					<BusinessPage />
 				</Route>
 			</Switch>
-			<AuthPage/>
-<<<<<<< HEAD
-=======
-			
->>>>>>> af484ca2038af407ccd496ab20c01126d0b3b9f6
+			<AuthPage />
 		</Router>
 	);
 }

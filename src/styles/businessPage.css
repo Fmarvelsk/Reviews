@@ -3,6 +3,12 @@
 	height: 8rem;
 }
 
+.place-name{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .container-fluid > h3{
     text-align: center;
 }

@@ -4,9 +4,9 @@ import { Container, Row, Col, Dropdown, Alert } from 'react-bootstrap';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import '../styles/businessPage.css';
-import Phone from '../image/call.svg'
-import Loc from '../image/location.svg'
-import Review from './Review'
+import Phone from '../image/call.svg';
+import Loc from '../image/location.svg';
+import Review from './Review';
 
 export default function BusinessPage() {
 	const [sorting, setSorting] = useState('Rating');
@@ -17,32 +17,43 @@ export default function BusinessPage() {
 				<Carousel />
 			</div>
 			<Container fluid>
-				<h3>Grand Palais</h3>
 				<Row>
 					<Col>
-						<Col xs={12} md={12} style={{ marginRight: '1rem' }}>
-							<Row>
-								<CircularProgressbar
-									value={percentage}
-									text={`${percentage}%`}
-									styles={buildStyles({
-										strokeLinecap: 'butt',
-									})}
-								/>
-							</Row>
-							<Row style={{ justifyContent: 'center' }}>
-								<small>300+ reviews</small>
-							</Row>
-							<Row id="overall-score-row">Overall Score</Row>
-						</Col>
-						
+						<Row>
+							<Col xs={12} md={12} style={{ marginRight: '1rem' }}>
+								<Row style={{paddingTop: '1.5rem'}}>
+									<Col>
+										<CircularProgressbar
+											value={percentage}
+											text={`${percentage}%`}
+											styles={buildStyles({
+												strokeLinecap: 'butt',
+											})}
+										/>
+										{/* <Row style={{ justifyContent: 'center' }}> */}
+										<p className="text-center mb-0">300+ reviews</p>
+										{/* </Row> */}
+										<p id="overall-score-row" className="text-center mb-1">Overall Score</p>
+									</Col>
+									<Col>
+										<h3 className="place-name">Grand Palais</h3>
+									</Col>
+								</Row>
+							</Col>
+						</Row>
 						<Col>
 							<Alert variant="dark">
 								<div className="location">
-									<span><img src={Loc} alt=""/></span><span> 1901 Thomridge Cir. Shiloh, Hawaii 81063</span>
+									<span>
+										<img src={Loc} alt="" />
+									</span>
+									<span> 1901 Thomridge Cir. Shiloh, Hawaii 81063</span>
 								</div>
 								<div className="phone-number">
-									<span><img src={Phone} alt=""/></span><span> (480) 555-0103</span>
+									<span>
+										<img src={Phone} alt="" />
+									</span>
+									<span> (480) 555-0103</span>
 								</div>
 							</Alert>
 						</Col>
@@ -71,8 +82,8 @@ export default function BusinessPage() {
 					</div>
 					<hr />
 				</Row>
-				<Review/>
-				<Review/>
+				<Review />
+				<Review />
 			</Container>
 		</>
 	);
