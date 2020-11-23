@@ -6,12 +6,7 @@ import SignUpForm from './SignupForm'
 import Logo from './Logo'
 
 function Signup(props) {
-	const { email, setUser } = useState();
-	const { password, setPassword } = useState();
-
-	const Signin = (e) => {
-		e.preventDefault();
-	};
+	
 	return (
 		<Modal show={props.show} onHide={props.handleClose}>
 		<Modal.Dialog style={{margin: 0}}>

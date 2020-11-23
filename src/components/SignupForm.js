@@ -1,31 +1,84 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
-import { Link } from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
+import axios from 'axios'
+import { useHistory } from 'react-router-dom';
 
-function Signup(props) {
-	const { email, setUser } = useState();
-	const { password, setPassword } = useState();
-
-	const Signin = (e) => {
-		e.preventDefault();
-	};
+function Signup() {
+	const history = useHistory();
+	const [firstname, setUsername] = useState(),
+		[lastname, setLastname] = useState(),
+		[email, setUser ]  = useState(),
+		 [password, setPassword ] = useState(),
+		 [error, setError] =  useState(""),
+		 [errorPassword, setErrorPassword] = useState(""),
+		 [userError, setUserError] = useState("")
+		 
+		 
+		const validatePassword = (e) => {
+			const patt =new RegExp('^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,20}$')
+			if(e.target.value === undefined || e.target.value === '' || patt.test(e.target.value) || e.target.value.length < 6){
+				setErrorPassword("Password needs 6-20 characters with at least one number")
+					
+			}
+			else {
+				setPassword(e.target.value)
+				setErrorPassword("")
+				}
+		
+		}
+		
+		 
+	const SigninBtn = (e) => {
+		e.preventDefault()
+		const info = {
+			firstname : firstname,
+			lastname : lastname,
+			email : email,
+			password : password
+		};
+		
+					const dbUrl = async() => {
+						const response = await axios({
+							method: "post",
+							headers: { 'Content-Type' : 'application/json'},
+							data: info,
+							url: "https://dev-bestops.herokuapp.com/v1/signup"
+			
+						}).then( response => {
+							
+							setErrorPassword('')
+							history.push('/profile')
+							console.log(response.data)
+						}).catch(err => 
+							setUserError("Email already exist")
+							 
+						)
+					}
+					dbUrl()
+		
+		
+		}
+		
+		
 	return (
 		<>
 			<Modal.Title id="login-modal-title">Join millions of people sharing their experience</Modal.Title>
-			<Form id="login-form">
+			<div className="red text-align">{userError}</div>
+			<Form id="login-form" onSubmit={SigninBtn}>
 				<Form.Row className="align-items-center">
+					
 					<Col xs={12} sm={6} md={6}>
 						<Form.Group>
 							<Form.Label>First Name</Form.Label>
-							<Form.Control type="text" placeholder="Mia" />
+							<Form.Control type="text" placeholder="Mia" onChange={e => setUsername(e.target.value)} required/>
 						</Form.Group>
 					</Col>
 					<Col xs={12} sm={6} md={6}>
 						<Form.Group>
 							<Form.Label>Last Name</Form.Label>
-							<Form.Control type="text" placeholder="Khalifa" />
+							<Form.Control type="text" placeholder="Khalifa" onChange={ e => setLastname(e.target.value)} required/>
 						</Form.Group>
 					</Col>
 				</Form.Row>
@@ -34,7 +87,8 @@ function Signup(props) {
 					<Col xs={12}>
 						<Form.Group controlId="formBasicEmail" id="form-group-signup-email">
 							<Form.Label>Email</Form.Label>
-							<Form.Control type="email" placeholder="Enter email" />
+							<Form.Control type="email" placeholder="Enter email" onChange={ e=> setUser(e.target.value)}/>
+								<div className="red"> {error}</div>
 						</Form.Group>
 					</Col>
 					<Col xs={12}>
@@ -43,10 +97,11 @@ function Signup(props) {
 							<Form.Control
 								type="password"
 								placeholder="Password"
-								pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,20}$"
-								onInvalid="this.setCustomValidity('Password needs 6-20 characters with at least one number')"
-								onInput="this.setCustomValidity('')"
-							/>
+								maxLength="20"
+								onChange = {validatePassword}
+								
+								/>
+								<div className="red">{errorPassword}</div>
 						</Form.Group>
 					</Col>
 				</Form.Row>
@@ -56,6 +111,7 @@ function Signup(props) {
 						Sign Up
 					</Button>
 				</div>
+				</Form>
 				<div id="login-button-container">
 					<Button variant="primary" type="submit" id="login-button-google">
 						<div className="google-button-text">
@@ -67,7 +123,7 @@ function Signup(props) {
 				<Form.Text id="no-account">
 					Already have an account? <span>Sign In</span>
 				</Form.Text>
-			</Form>
+			
 		</>
 	);
 }

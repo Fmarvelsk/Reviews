@@ -18,16 +18,16 @@ function Footer() {
           <h6 className="mb-0">Get connected with us on social networks!</h6>
         </div>
         <div className="col-md-6 col-lg-7 text-center text-md-right">
-          <Link>
+          <Link to="">
             <FacebookIcon className="fabc mr-4"/>
           </Link>
-          <Link>
+          <Link to="">
             <TwitterIcon className="fabt mr-4"/>
           </Link>
-          <Link>
+          <Link to="">
             <InstagramIcon className="fabi mr-4"/>
           </Link>
-          <Link>
+          <Link to="">
             <WhatsAppIcon className="fabw mr-4"/>
           </Link>
           

@@ -325,8 +325,8 @@ border-radius: 0.55rem;
   padding-right: 10px;
 }
 .padding-col{
-padding-left: 15% !important;
-padding-right: 10% !important;
+padding-left: 15% ;
+padding-right: 10%;
 }
 .recent-review{
   background-color: #E5E5E5;
@@ -551,11 +551,7 @@ color: #ffffff;
 }
 
 }
-@media only screen and (max-width: 425px){
-.padding-col {
-  padding-left: 0% !important;padding-right: 0% !important;
-}
-}
+
 @media only screen and (max-width: 1024px){
   .rounded-image {
     left: 33px;
@@ -592,6 +588,11 @@ color: #ffffff;
     right: 0;
   }
 }
+@media only screen and (max-width:382px) {
+  .profile-name {
+    right: 16%;
+  }
+}
 @media only screen and (max-width: 390px){
   .rounded-image {
     left: 90px;
@@ -626,4 +627,20 @@ color: #ffffff;
   .pad-row-card{
     padding: 0px 20px;
   }
+}
+@media only screen and (max-width:490px) {
+  .padding-col {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width:362px){
+  .padding-col {
+    padding: 0px;
+  }
+}
+.pb{
+  padding-bottom: 20px;
+}
+.modal-header {
+  border-bottom: none !important;
 }

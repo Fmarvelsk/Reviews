@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import $ from 'jquery';
+import $, { post } from 'jquery';
 import 'react-bootstrap';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './App.css';
@@ -16,9 +16,18 @@ import WriteReview from './components/WriteReviews';
 import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
-
+import axios from 'axios'
 function App() {
 	useEffect(() => {
+		const dbUrl = async() => {
+			const response = await axios({
+				method: "GET",
+				url: "https://dev-bestops.herokuapp.com/v1/business"
+
+			})
+			console.log(response.data)
+		}
+		dbUrl()
 		$(function() {
 
 			$(".progress-circle").each(function() {

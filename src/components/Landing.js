@@ -20,8 +20,6 @@ import SignUp from './Signup';
 
 export default function Landing() {
 	const { path, url } = useRouteMatch();
-	console.log(path);
-
 	const [hideCard, showCard] = useState(true);
 	return (
 		<>

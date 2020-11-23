@@ -18,6 +18,7 @@ function Events () {
         <div className="create"><button>Create Event</button></div>
             </div>
             </div>
+            
             <EventCard/>
             <EventCard/>
             <EventCard/>
