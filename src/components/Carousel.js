@@ -1,6 +1,4 @@
 import React from 'react';
-import { Carousel, Container, Row, Col } from 'react-bootstrap';
-import Random from '../image/Random Symboles 2.jpg';
 import Phone from '../image/phone 3.jpg';
 import Automate from '../image/automobile.jpg';
 import Phone2 from '../image/phone 2.jpg';

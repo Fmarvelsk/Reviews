@@ -1,5 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+
 function Footer() {
     return(
 <div>        
@@ -13,22 +18,19 @@ function Footer() {
           <h6 className="mb-0">Get connected with us on social networks!</h6>
         </div>
         <div className="col-md-6 col-lg-7 text-center text-md-right">
-          <a className="fb-ic">
-            <FacebookIcon className="fabc"/>
-          </a>
-          <a className="tw-ic">
-            <i className="fab fa-twitter white-text mr-4"> </i>
-          </a>
-          <a className="gplus-ic">
-            <i className="fab fa-google-plus-g white-text mr-4"> </i>
-          </a>
-          <a className="li-ic">
-            <i className="fab fa-linkedin-in white-text mr-4"> </i>
-          </a>
-          <a className="ins-ic">
-            <i className="fab fa-instagram white-text"> </i>
-          </a>
-
+          <Link>
+            <FacebookIcon className="fabc mr-4"/>
+          </Link>
+          <Link>
+            <TwitterIcon className="fabt mr-4"/>
+          </Link>
+          <Link>
+            <InstagramIcon className="fabi mr-4"/>
+          </Link>
+          <Link>
+            <WhatsAppIcon className="fabw mr-4"/>
+          </Link>
+          
         </div>
 
       </div>
@@ -41,9 +43,8 @@ function Footer() {
 
       <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
-        <h6 className="text-uppercase font-weight-bold">About</h6>
-        <hr className="mb-4 mt-0 d-inline-block mx-auto hr-style"/>
-        <p>
+        <h6 className="text-uppercase font-weight-bold nice mb-3">About</h6>
+         <p>
           <a className="a-color" href="#!">About US</a>
         </p>
         <p>
@@ -64,8 +65,7 @@ function Footer() {
       </div>
     <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
-        <h6 className="text-uppercase font-weight-bold">Discover</h6>
-        <hr className="mb-4 mt-0 d-inline-block mx-auto hr-style"/>
+        <h6 className="text-uppercase font-weight-bold nice mb-3">Discover</h6>
         <p>
           <a className="a-color" href="#!">Categories</a>
         </p>
@@ -86,8 +86,8 @@ function Footer() {
       </div>
       <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
-        <h6 className="text-uppercase font-weight-bold">For Business</h6>
-        <hr className="mb-4 mt-0 d-inline-block mx-auto hr-style"/>
+        <h6 className="text-uppercase font-weight-bold nice mb-3">For Business</h6>
+        
         <p>
           <a className="a-color" href="#!">Our Brands</a>
         </p>
@@ -105,7 +105,7 @@ function Footer() {
       <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
         <h6 className="text-uppercase font-weight-bold">Contact</h6>
-        <hr className="mb-4 mt-0 d-inline-block mx-auto hr-style"/>
+        
         <p>
           <i className="fas fa-home mr-3"></i> New York, NY 10012, US</p>
         <p>

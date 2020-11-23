@@ -2,11 +2,12 @@ import React from 'react';
 import { Image, Form, FormControl, Jumbotron, Container } from 'react-bootstrap';
 import ImgHome from '../image/photoEvent4.jpg';
 import NavRes from './NavImage';
+import SearchIcon from '@material-ui/icons/Search';
 import '../styles/header.css';
 function Header() {
 	return (
 		<>
-			<Jumbotron className="background-image" fluid>
+			<Jumbotron className="background-image mt-5" fluid>
 				{/* <Image src={ImgHome} fluid /> */}
 				<Container>
 					<div className="imagecaption">
@@ -15,10 +16,8 @@ function Header() {
 						<div className="searchpos">
 							<Form>
 								<FormControl type="text" placeholder="Search" className="mr-sm-2" />
-								<button type="submit" className="dl">
-									<i class="fa fa-search"></i>
-								</button>
-							</Form>
+								 <button type="submit" className="dl"><SearchIcon/></button>						
+    </Form>
 							<NavRes />
 						</div>
 					</div>
