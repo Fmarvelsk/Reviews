@@ -8,6 +8,7 @@ import Phone from '../image/call.svg'
 import Loc from '../image/location.svg'
 import Review from './Review'
 
+
 export default function BusinessPage() {
 	const [sorting, setSorting] = useState('Rating');
 	const percentage = 87;

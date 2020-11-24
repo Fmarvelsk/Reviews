@@ -20,9 +20,6 @@ import BusinessPage from './components/BusinessPage'
 
 function App() {
 	useEffect(() => {
-<<<<<<< HEAD
-		$('#recipeCarousel2 .carousel-item').each(function () {
-=======
 		$(function() {
 
 			$(".progress-circle").each(function() {
@@ -49,9 +46,8 @@ function App() {
 			}
 		  
 		  });
-		  
-		$('.carousel .carousel-item').each(function () {
->>>>>>> af484ca2038af407ccd496ab20c01126d0b3b9f6
+		  $('#recipeCarousel2 .carousel-item').each(function () {
+
 			var next = $(this).next();
 			if (!next.length) {
 				next = $(this).siblings(':first');
@@ -93,10 +89,7 @@ function App() {
 				</Route>
 			</Switch>
 			<AuthPage/>
-<<<<<<< HEAD
-=======
 			
->>>>>>> af484ca2038af407ccd496ab20c01126d0b3b9f6
 		</Router>
 	);
 }
