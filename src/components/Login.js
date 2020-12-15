@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal } from 'react-bootstrap';
-import { Link } from 'react';
-import { Form, Button } from 'react-bootstrap';
 import Logo from './Logo'
 import LoginForm from './LoginForm'
 
 function Login(props) {
-	const { email, setUser } = useState();
-	const { password, setPassword } = useState();
-
-	const Signin = (e) => {
-		e.preventDefault();
-	};
 	return (
 		<Modal show={props.show} onHide={props.handleClose}>
 		<Modal.Dialog style={{margin: 0}}>

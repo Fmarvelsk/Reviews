@@ -26,7 +26,7 @@ function CarouselSlide() {
             <div className="col-md-3 col-xs-6">
              
                 <img className="d-block img-carousel rounded-circle"
-                  src={Automate}/>
+                  src={Automate} alt="business"/>
                    <p className="carousel-text">Tunscani Motors</p>
                  
               </div>
@@ -34,7 +34,7 @@ function CarouselSlide() {
             <div className="carousel-item">
               <div className="col-md-3 col-xs-6 ">
                 <img className="d-block img-carousel rounded-circle"
-                  src={Event}/>
+                  src={Event} alt="business"/>
                    <p className="carousel-text">Tunscani Motors</p>
                  
               </div>
@@ -42,21 +42,21 @@ function CarouselSlide() {
             <div className="carousel-item">
             <div className="col-md-3 col-xs-6 ">
                 <img className="d-block img-carousel rounded-circle"
-                  src={Phone2}/> 
+                  src={Phone2} alt="business"/> 
                   <p className="carousel-text">Liberty comms</p>
                                </div>
             </div>
             <div className="carousel-item">
             <div className="col-md-3 col-xs-6 ">
                 <img className="d-block img-carousel rounded-circle"
-                  src={Res}/>
+                  src={Res} alt="business"/>
                   <p className="carousel-text">Quench Horse Diner</p>
               </div>
             </div>
             <div className="carousel-item">
             <div className="col-md-3 col-xs-6 ">
                 <img className="d-block img-carousel rounded-circle"
-                  src={Phone}/>
+                  src={Phone} alt="business"/>
                    <p className="carousel-text">Phone World NGN</p>
                  
               </div>
@@ -64,7 +64,7 @@ function CarouselSlide() {
             <div className="carousel-item">
             <div className="col-md-3 col-xs-6 ">
                 <img className="d-block img-carousel rounded-circle"
-                  src={Res2}/>
+                  src={Res2} alt="business"/>
                    <p className="carousel-text">Liberty Comms</p>
                  
               </div>
@@ -72,7 +72,7 @@ function CarouselSlide() {
             <div className="carousel-item">
             <div className="col-md-3 col-xs-6 ">
                 <img className="d-block img-carousel rounded-circle"
-                  src={Chips}/>
+                  src={Chips} alt="business"/>
                    <p className="carousel-text">Liberty Comms</p>
                  
               </div>
@@ -80,7 +80,7 @@ function CarouselSlide() {
             <div className="carousel-item">
             <div className="col-md-3 col-xs-6 ">
                 <img className="d-block img-carousel rounded-circle"
-                  src={Shop}/>
+                  src={Shop} alt="business"/>
                    <p className="carousel-text">Liberty Comms</p>
                  
               </div>

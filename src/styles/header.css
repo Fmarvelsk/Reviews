@@ -12,11 +12,10 @@
         
     }
     .imagecaption {
-        bottom: 65%;
-        padding: 10px;
+        bottom: 59%;
     }
     .imagecaption > h3 {
-        font-size: 40px;
+        font-size: 34px;
     }
 }
 @media only screen and (max-height:500px){

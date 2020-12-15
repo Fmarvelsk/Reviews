@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Image, Form, FormControl, Jumbotron, Container } from 'react-bootstrap';
-import ImgHome from '../image/photoEvent4.jpg';
+import { Form, FormControl, Jumbotron, Container } from 'react-bootstrap';
 import NavRes from './NavImage';
 import SearchIcon from '@material-ui/icons/Search';
 import '../styles/header.css';
@@ -13,7 +12,6 @@ function Header() {
 	return (
 		<>
 			<Jumbotron className="background-image mt-5" fluid>
-				{/* <Image src={ImgHome} fluid /> */}
 				<Container>
 					<div className="imagecaption">
 						<h3>Everyone has a unique story to tell</h3>

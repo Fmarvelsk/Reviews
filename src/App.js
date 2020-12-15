@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import $, { post } from 'jquery';
+import React, { useEffect } from 'react';
+import $ from 'jquery';
 import 'react-bootstrap';
-import { Modal, Button, Form } from 'react-bootstrap';
 import './App.css';
 import Landing from './components/Landing';
-import Logo from './components/Logo';
-import Login from './components/Login';
-import SignUp from './components/Signup';
-import { BrowserRouter as Router, Route, Switch, useRouteMatch } from 'react-router-dom';
-
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import EventHeader from './components/Events';
 import Profile from './components/Profile';
 import WriteReview from './components/WriteReviews';
@@ -17,17 +11,34 @@ import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
 import axios from 'axios'
+import { useStateValue } from './StateProvider'
 function App() {
+	//eslint-disable-next-line
+	const [{buisness, reviews}, dispatch] = useStateValue()
 	useEffect(() => {
-		const dbUrl = async() => {
+	const dbUrl = async() => {
 			const response = await axios({
 				method: "GET",
 				url: "https://dev-bestops.herokuapp.com/v1/business"
 
-			})
-			console.log(response.data)
+			}).then( res => dispatch({
+				type:'Update reviews',
+				business : res.data
+			})).catch( err => (err))
+			
+		}
+		const dbReview = async () => {
+			const recentReviews = await axios({
+				method : 'GET',
+				url : 'https://dev-bestops.herokuapp.com/v1/review/recent'
+			}).then ( result => dispatch({
+				type:'Update reviews',
+				reviews : result.data
+			})).catch( err => err)
 		}
 		dbUrl()
+		dbReview()
+		
 		$(function() {
 
 			$(".progress-circle").each(function() {
@@ -36,7 +47,7 @@ function App() {
 			  var left = $(this).find('.progress-circle-left .progress-circle-bar');
 			  var right = $(this).find('.progress-circle-right .progress-circle-bar');
 		  
-			  if (value > 0) {
+			  if (value < 0) {
 				if (value <= 50) {
 				  right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
 				} else {

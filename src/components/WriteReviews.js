@@ -2,15 +2,15 @@ import React from 'react';
 import Recent from './Recent'
 import Photo1 from '../image/photo580.jpg';
 import { Row, Col } from 'react-bootstrap';
-import axios from 'axios'
+//import axios from 'axios'
 function ReviewBusiness (){
     const SendReviews = async (e)=> {
         e.preventDefault()
-        const sendUrl = await axios({
+  /*      const sendUrl = await axios({
             method:"PUT",
             url: "https://dev-bestops.herokuapp.com/v1/review/add"
         })
-        console.log(sendUrl.data)
+        console.log(sendUrl.data)*/
     }
     return(
         <div>

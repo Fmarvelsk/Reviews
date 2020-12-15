@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
 import '../styles/login.css'
-import axios from 'axios'
+//import axios from 'axios'
 import { useHistory } from 'react-router-dom';
 
 export default function LoginForm() {
-	const history = useHistory()
+	const history = useHistory ()
 	const [email, setEmail] = useState()
 	const [password, setPassword] = useState()
 	const [error, setError] = useState()
@@ -16,7 +16,7 @@ export default function LoginForm() {
 			password: password
 		}
 		e.preventDefault()
-		const dbUser = async() => {
+		/*const dbUser = async() => {
 				const response = await axios({
 					method: "post",
 					headers: { 'Content-Type' : 'application/json'},
@@ -28,7 +28,7 @@ export default function LoginForm() {
 		setError("Invalid email and Password")
 	})
 		}
-		dbUser()
+		dbUser()*/
 	}
 	return (
 		<>

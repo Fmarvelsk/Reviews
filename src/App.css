@@ -413,10 +413,6 @@ border-radius: 15px;
   box-shadow: 4px 4px 34px 2px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-.pad-row-card {
-  padding:0px 50px; 
-  margin-bottom: 10px;
-}
 .pic-fluid{
   position: absolute;
   top: 140px;
@@ -549,7 +545,6 @@ color: #ffffff;
   padding-bottom: 0px !important;
   padding-top: 8px !important;
 }
-
 }
 
 @media only screen and (max-width: 1024px){
@@ -575,6 +570,10 @@ color: #ffffff;
     bottom: -70px;
     z-index: 1;
   }
+  
+h2 {
+  font-size: 1rem !important;
+}
   .list-group {
     margin-top: 8rem !important;
     padding: 40px!important;
@@ -622,11 +621,6 @@ color: #ffffff;
 }
 .card-body {
   background-color: #EFEFEF;
-}
-@media only screen and (max-width:768px){
-  .pad-row-card{
-    padding: 0px 20px;
-  }
 }
 @media only screen and (max-width:490px) {
   .padding-col {

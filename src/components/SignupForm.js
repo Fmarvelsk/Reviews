@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { Form, Button, Col } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
-import axios from 'axios'
+//import axios from 'axios'
 import { useHistory } from 'react-router-dom';
 
 function Signup() {
@@ -13,7 +13,7 @@ function Signup() {
 		 [password, setPassword ] = useState(),
 		 [error, setError] =  useState(""),
 		 [errorPassword, setErrorPassword] = useState(""),
-		 [userError, setUserError] = useState("")
+		 [userError, setUserError] = useState("") 
 		 
 		 
 		const validatePassword = (e) => {
@@ -39,7 +39,7 @@ function Signup() {
 			password : password
 		};
 		
-					const dbUrl = async() => {
+					/*const dbUrl = async() => {
 						const response = await axios({
 							method: "post",
 							headers: { 'Content-Type' : 'application/json'},
@@ -56,7 +56,7 @@ function Signup() {
 							 
 						)
 					}
-					dbUrl()
+					dbUrl()*/
 		
 		
 		}

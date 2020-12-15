@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
-import AuthPage from './AuthPage'
 import { showModalLogin, showModalSignup } from '../store/actions/authModal'
 import { useDispatch } from 'react-redux'
 import SearchIcon from '@material-ui/icons/Search'
