@@ -25,21 +25,10 @@ export default function Landing() {
 				<div className="card-bottom">
 					<div className="postion-center">
 						<h3>Recent Reviews</h3>
-						<div className="sort-btn"> Sort</div>
-					</div>
+						</div>
 					
-    <Row className="write-row">
-					<Cards recent={reviews}/>
-					
-					</Row>
-					{hideCard ? (
-						<Card
-							title="Card title"
-							text="This is a wider card with supporting text below as a natural lead-in to
-      additional content. This content is a little bit longer."
-							time="Last updated 3 mins ago"
+    					<Card recent={reviews}
 						/>
-					) : null}
 					<div className="load-btn">
 						<Button
 							onClick={() => {

@@ -1,0 +1,44 @@
+
+@media (min-width: 768px)
+{
+    .card-rev {
+    flex: 0 0 25%;
+    margin-right: 15px;
+    margin-bottom: 1rem;
+}
+}
+.card-rev {
+    background-color: rgba(0,0,0,.03);
+ 
+    margin-bottom: 1rem;
+
+}
+@media (min-width: 768px)
+{
+    .card-deck-rev {
+    display: flex;
+    flex-flow: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+}
+.footer-review {
+        padding: .75rem 1.25rem;
+        border-top: 1px solid rgba(0,0,0,.125);
+    }
+
+.footer-review:last-child {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+.diffs {
+    position: relative;
+    left: 15px;
+}
+@media (max-width : 768px){
+    .card-deck-rev {
+            padding: 30px;
+        
+    }
+}

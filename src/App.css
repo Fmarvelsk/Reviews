@@ -38,8 +38,10 @@
 }
 }
 .body_page {
-  margin: 20px;
+  margin-left: 15px;
+  margin-top: 15px;
 }
+
 .postion-center {
   position: relative;
   bottom: 0;
@@ -600,20 +602,25 @@ h2 {
 .post-side {
   position: relative;
   top: -80px;
-  left: 41px;
+  left: 25px;
   padding: 20px 20px 0px 20px;
 }
-.c {
+.card-review {
   display: flex;
-  margin-bottom: 10px;
+  justify-content: space-between;
 }
 .diff {
+  display: flex;
+}
+.my-margin {
   margin-left: 10px;
 }
-.diffs {
-  position: absolute;
-  right: 20px;
+span.diff{
+font-weight: 600;
+font-size: large;
+justify-content: center;
 }
+
 .size-img {
   width: 50px;
   height: 50px;
