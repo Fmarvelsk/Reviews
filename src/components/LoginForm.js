@@ -4,10 +4,14 @@ import googleLogo from '../image/google_logo.png';
 import '../styles/login.css'
 
 export default function LoginForm() {
+	const LoginSubmit = (e) => {
+		e.preventDefault()
+		
+	}
 	return (
 		<>
 			<Modal.Title id="login-modal-title"><span>e</span> Welcome</Modal.Title>
-			<Form id="login-form">
+			<Form id="login-form" onClick={LoginSubmit}>
 				<Form.Group controlId="formBasicEmail">
 					<Form.Label>Email</Form.Label>
 					<Form.Control type="email" placeholder="Enter email" />
