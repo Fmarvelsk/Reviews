@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import $ from 'jquery';
 import 'react-bootstrap';
 import './App.css';
@@ -10,18 +10,21 @@ import WriteReview from './components/WriteReviews';
 import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
+import Spinner from './components/Spinner'
 import axios from 'axios'
 import { useStateValue } from './StateProvider'
 function App() {
 	//eslint-disable-next-line
 	const [{buisness, reviews}, dispatch] = useStateValue()
+	const [loading, setLoading ] = useState(true)
 	useEffect(() => {
 	const dbUrl = async() => {
 			const response = await axios({
 				method: "GET",
 				url: "https://dev-bestops.herokuapp.com/v1/business"
 
-			}).then( res => dispatch({
+			})
+			.then( res => dispatch({
 				type:'Update reviews',
 				business : res.data
 			})).catch( err => (err))
@@ -31,10 +34,9 @@ function App() {
 			const recentReviews = await axios({
 				method : 'GET',
 				url : 'https://dev-bestops.herokuapp.com/v1/review/recent'
-			}).then ( result => dispatch({
-				type:'Update reviews',
-				reviews : result.data
-			})).catch( err => err)
+			}).then ( result => {
+			
+			console.log(result)}).catch( err => err)
 		}
 		dbUrl()
 		dbReview()
@@ -84,7 +86,9 @@ function App() {
 		});
 	}, []);
 	return (
-		<Router>
+		<>
+	
+			<Router>
 			<Switch>
 				<Route exact path="/">
 					<Landing />
@@ -105,6 +109,8 @@ function App() {
 			<AuthPage/>
 			
 		</Router>
+
+				</>
 	);
 }
 
