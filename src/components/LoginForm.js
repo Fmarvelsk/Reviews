@@ -49,7 +49,7 @@ export default function LoginForm() {
 	return (
 		<>
 			<Modal.Title id="login-modal-title"><span>e</span> Welcome</Modal.Title>
-			<div className="red text-center">{error}</div>
+		<div className="red text-center">{error}</div>
 			<Form id="login-form" onSubmit={Signin} >
 				<Form.Group controlId="formBasicEmail">
 					<Form.Label>Email</Form.Label>

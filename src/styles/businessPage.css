@@ -1,0 +1,65 @@
+#i-like-surprises {
+	overflow-y: scroll;
+	height: 8rem;
+}
+
+.container-fluid > h3{
+    text-align: center;
+}
+
+#ml {
+	margin-left: 0rem;
+}
+
+.CircularProgressbar{
+    max-height: 8rem;
+}
+
+#overall-score-row {
+    justify-content: center;
+    font-weight: 500;
+    color: #01579b
+}
+
+#reviews-rating {
+	display: flex;
+	width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+	padding: 1rem;
+}
+
+#reviews-rating > div > .dropdown {
+	display: inline;
+}
+
+#reviews-rating h3{
+    color: #01579b;
+    margin-bottom: 0;
+}
+
+#dropdown-basic {
+    /* background-color: #01579b; */
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#dropdown-basic:focus {
+    outline: none !important;
+}
+
+.dropdown *{
+	color: black !important;
+}
+
+.location img, .phone-number img{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.location, .phone-number{
+    display: flex;
+}
+

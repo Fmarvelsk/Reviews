@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  {props.recent?.data?.map( (card, index) =>(
         <Col md={6} xl={4} className="mb-3" key={index}>
         <div className="adjust">
@@ -42,3 +43,14 @@
     </Col>
     ) )}
      
+=======
+
+<svg width="1291" height="497" viewBox="0 0 1291 497" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M0 0H1291V487C1291 492.523 1286.52 497 1281 497H9.99998C4.47714 497 0 492.523 0 487V0Z" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="translate(0 -0.366035) scale(0.0004 0.00103903)"/>
+</pattern>
+</defs>
+</svg>
+>>>>>>> ryan

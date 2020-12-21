@@ -10,9 +10,14 @@ import WriteReview from './components/WriteReviews';
 import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
+<<<<<<< HEAD
 import Spinner from './components/Spinner'
 import axios from 'axios'
 import { useStateValue } from './StateProvider'
+=======
+import BusinessPage from './components/BusinessPage'
+
+>>>>>>> ryan
 function App() {
 	//eslint-disable-next-line
 	const [{loading, reviews}, dispatch] = useStateValue()
@@ -72,8 +77,8 @@ function App() {
 			}
 		  
 		  });
-		  
-		$('.carousel .carousel-item').each(function () {
+		  $('#recipeCarousel2 .carousel-item').each(function () {
+
 			var next = $(this).next();
 			if (!next.length) {
 				next = $(this).siblings(':first');
@@ -96,6 +101,7 @@ function App() {
 			<Switch>
 				<Route exact path="/">
 					<Landing />
+					<Footer/>
 				</Route>
 				<Route path="/Events">
 					<Nav />
@@ -108,6 +114,10 @@ function App() {
 				<Route path="/writeReview">
 					<Navbar />
 					<WriteReview />
+				</Route>
+				<Route path="/business">
+					<Navbar />
+					<BusinessPage/>
 				</Route>
 			</Switch>
 			<AuthPage/>

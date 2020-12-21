@@ -104,17 +104,7 @@ function Footer() {
       </div>
       <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
-        <h6 className="text-uppercase font-weight-bold">Contact</h6>
-        
-        <p>
-          <i className="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-        <p>
-          <i className="fas fa-envelope mr-3"></i> info@example.com</p>
-        <p>
-          <i className="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-        <p>
-          <i className="fas fa-print mr-3"></i> + 01 234 567 89</p>
-
+        <input type="text" placeholder="Email"/>
       </div>
   
     </div>
