@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Form, Button, Modal } from 'react-bootstrap';
+import { Form, Button, Modal, Spinner } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
 import '../styles/login.css'
-//import axios from 'axios'
+import axios from 'axios'
 import { useHistory } from 'react-router-dom';
 
 export default function LoginForm() {
+	const [isloading, loading] = useState(false)
 	const history = useHistory ()
 	const [email, setEmail] = useState()
 	const [password, setPassword] = useState()
@@ -16,19 +17,34 @@ export default function LoginForm() {
 			password: password
 		}
 		e.preventDefault()
-		/*const dbUser = async() => {
+		loading(true)
+		const dbUser = async() => {
 				const response = await axios({
 					method: "post",
 					headers: { 'Content-Type' : 'application/json'},
 					data: info,
 					url: "https://dev-bestops.herokuapp.com/v1/login"
-	}).then(token => {
+	}).then(token => {	
+		
+		setTimeout(() => {
+			setEmail('')
+			setPassword('')
 		history.push('/profile')
+		
+		}, 2000);
+			
+		
 	}).catch( err => {
+		setTimeout(() => {
+		loading(false);
+		setPassword('')
 		setError("Invalid email and Password")
+		  }, 2000);
+		
 	})
 		}
-		dbUser()*/
+
+		dbUser()
 	}
 	return (
 		<>
@@ -52,8 +68,10 @@ export default function LoginForm() {
 				</Form.Group>
 				<Form.Text id="forgot-password">Forgot Password</Form.Text>
 				<div id="login-button-container">
-					<Button variant="primary" type="submit" id="login-button">
-						Log In
+					<Button variant="primary" type="submit" id="login-button" disabled={isloading}>
+						{isloading ? (<><Spinner animation="border" variant="primary"/>
+						 <span className="sr-only">Loading...</span></>
+						 ) :'Login' }  
 					</Button>
 				</div>
 				</Form>
@@ -65,8 +83,8 @@ export default function LoginForm() {
 						</div>
 					</Button>
 				</div>
-				<Form.Text id="no-account">
-					Dont have an account? <span>Sign Up</span>
+				<Form.Text>
+					Dont have an account? <span className="acc">Sign Up</span>
 				</Form.Text>	
 		</>
 	);

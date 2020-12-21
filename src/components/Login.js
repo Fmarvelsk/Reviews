@@ -6,6 +6,7 @@ import LoginForm from './LoginForm'
 function Login(props) {
 	return (
 		<Modal show={props.show} onHide={props.handleClose}>
+			
 		<Modal.Dialog style={{margin: 0}}>
 			<Modal.Header closeButton>
 				<Logo />

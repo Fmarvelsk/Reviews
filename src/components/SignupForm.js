@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
-//import axios from 'axios'
+import axios from 'axios'
 import { useHistory } from 'react-router-dom';
+
 
 function Signup() {
 	const history = useHistory();
 	const [firstname, setUsername] = useState(),
+	[isloading, loading] = useState(false),
 		[lastname, setLastname] = useState(),
 		[email, setUser ]  = useState(),
 		 [password, setPassword ] = useState(),
@@ -32,6 +34,7 @@ function Signup() {
 		 
 	const SigninBtn = (e) => {
 		e.preventDefault()
+		loading(true)
 		const info = {
 			firstname : firstname,
 			lastname : lastname,
@@ -39,7 +42,7 @@ function Signup() {
 			password : password
 		};
 		
-					/*const dbUrl = async() => {
+					const dbUrl = async() => {
 						const response = await axios({
 							method: "post",
 							headers: { 'Content-Type' : 'application/json'},
@@ -47,16 +50,23 @@ function Signup() {
 							url: "https://dev-bestops.herokuapp.com/v1/signup"
 			
 						}).then( response => {
+							setTimeout( () => {
+								setErrorPassword('')
+								history.push('/profile')
+								
+							}, 2000)
 							
-							setErrorPassword('')
-							history.push('/profile')
 							console.log(response.data)
 						}).catch(err => 
+							setTimeout( () => {
+								loading(false)
 							setUserError("Email already exist")
+								
+							}, 2000)
 							 
 						)
 					}
-					dbUrl()*/
+					dbUrl()
 		
 		
 		}
@@ -72,13 +82,13 @@ function Signup() {
 					<Col xs={12} sm={6} md={6}>
 						<Form.Group>
 							<Form.Label>First Name</Form.Label>
-							<Form.Control type="text" placeholder="Mia" onChange={e => setUsername(e.target.value)} required/>
+							<Form.Control type="text" placeholder="John" onChange={e => setUsername(e.target.value)} required/>
 						</Form.Group>
 					</Col>
 					<Col xs={12} sm={6} md={6}>
 						<Form.Group>
 							<Form.Label>Last Name</Form.Label>
-							<Form.Control type="text" placeholder="Khalifa" onChange={ e => setLastname(e.target.value)} required/>
+							<Form.Control type="text" placeholder="Doe" onChange={ e => setLastname(e.target.value)} required/>
 						</Form.Group>
 					</Col>
 				</Form.Row>
@@ -108,7 +118,10 @@ function Signup() {
 
 				<div id="login-button-container">
 					<Button variant="primary" type="submit" id="login-button">
-						Sign Up
+					{isloading ? (<><Spinner animation="border" variant="primary" disabled={isloading}/>
+						 <span className="sr-only">Loading...</span></>
+						 ) :'Sign up' }  
+			
 					</Button>
 				</div>
 				</Form>

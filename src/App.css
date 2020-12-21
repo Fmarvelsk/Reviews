@@ -599,11 +599,9 @@ h2 {
     left: 90px;
   }
 }
-.post-side {
-  position: relative;
-  top: -80px;
-  left: 25px;
-  padding: 20px 20px 0px 20px;
+.pos-side {
+opacity: 0.8;
+font-size: 12px;  
 }
 .card-review {
   display: flex;

@@ -4,6 +4,7 @@ export const initialState = {
     user : [],
     reviews : [],
     business : [],
+    loading : true,
 }
 
 const reducer = (state, action) => {
@@ -17,6 +18,7 @@ const reducer = (state, action) => {
              return{
                  ...state,
                  reviews : action.reviews,
+                 loading : false
 
              }
              case 'Business':

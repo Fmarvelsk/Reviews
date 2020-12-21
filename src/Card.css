@@ -42,3 +42,17 @@
         
     }
 }
+.rev-cards{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 3rem;
+}
+.review-h3{
+    width: 70%;
+}
+.review-h3 >h3 {
+    text-decoration: underline;
+}
+.card-body{
+    padding: 1rem !important;
+}

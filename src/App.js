@@ -15,15 +15,15 @@ import axios from 'axios'
 import { useStateValue } from './StateProvider'
 function App() {
 	//eslint-disable-next-line
-	const [{buisness, reviews}, dispatch] = useStateValue()
-	const [loading, setLoading ] = useState(true)
+	const [{loading, reviews}, dispatch] = useStateValue()
+	//const [loading, setLoading ] = useState()
 	useEffect(() => {
 	const dbUrl = async() => {
 			const response = await axios({
 				method: "GET",
 				url: "https://dev-bestops.herokuapp.com/v1/business"
 
-			})
+			}).then( response => response.json())
 			.then( res => dispatch({
 				type:'Update reviews',
 				business : res.data
@@ -35,8 +35,13 @@ function App() {
 				method : 'GET',
 				url : 'https://dev-bestops.herokuapp.com/v1/review/recent'
 			}).then ( result => {
+				dispatch({
+				type:'Update reviews',
+				reviews : result.data,
+				
+			})
 			
-			console.log(result)}).catch( err => err)
+		}).catch( err => err)
 		}
 		dbUrl()
 		dbReview()
@@ -87,7 +92,6 @@ function App() {
 	}, []);
 	return (
 		<>
-	
 			<Router>
 			<Switch>
 				<Route exact path="/">
@@ -109,8 +113,7 @@ function App() {
 			<AuthPage/>
 			
 		</Router>
-
-				</>
+					</>
 	);
 }
 

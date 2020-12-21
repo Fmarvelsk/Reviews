@@ -15,7 +15,7 @@ export default function AuthPage() {
 	return (
 		
 		(showModal.loginPage ? (
-			<Login show={showModal.loginPage && showModal.show} handleClose={handleClose} />
+			<Login show={showModal.loginPage && showModal.show}  handleClose={handleClose} />
 		) : (
 			<SignUp show={!showModal.loginPage && showModal.show} handleClose={handleClose} />
 		))
