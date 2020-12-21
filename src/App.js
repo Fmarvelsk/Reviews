@@ -10,14 +10,12 @@ import WriteReview from './components/WriteReviews';
 import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
-<<<<<<< HEAD
 import Spinner from './components/Spinner'
 import axios from 'axios'
 import { useStateValue } from './StateProvider'
-=======
 import BusinessPage from './components/BusinessPage'
+import Footer from './components/Footer'
 
->>>>>>> ryan
 function App() {
 	//eslint-disable-next-line
 	const [{loading, reviews}, dispatch] = useStateValue()

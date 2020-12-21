@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Header from './Header';
 import Card from './Cardgrid';
 import Carousel from './Carousel';
-import Footer from './Footer';
+//import Footer from './Footer';
 import { useStateValue } from '../StateProvider';
 // import Profile from './Profile';
 import { Button, Row } from 'react-bootstrap';
@@ -41,7 +41,6 @@ export default function Landing() {
 				</div>
 				<Carousel />
 			</div>
-			<Footer/>
 			<Switch>
 				<Route path={`${path}/:login`} component={Login} />
 				<Route path={`${path}/signup`} component={SignUp} />
