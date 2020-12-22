@@ -70,7 +70,7 @@ font-size: 18px;
 line-height: 21px;
   
 } 
-.a-color {
+.colors {
   color: #ffffff;
 }
 .navRes {
@@ -239,6 +239,7 @@ ol, ul {
   position: absolute;
   bottom: 10px;
   right: 26%;
+  text-transform: capitalize;
 }
 
 .col-color {
@@ -274,9 +275,6 @@ line-height: 35px;
 }
 .col-8-color{
 background-color: #ffffff;
-}
-.tab {
-  background-color: #EFEFEF;
 }
 .review-pic {
   width: 112px;

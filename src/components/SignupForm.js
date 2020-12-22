@@ -13,7 +13,6 @@ function Signup() {
 		[lastname, setLastname] = useState(),
 		[email, setUser ]  = useState(),
 		 [password, setPassword ] = useState(),
-		 [error, setError] =  useState(""),
 		 [errorPassword, setErrorPassword] = useState(""),
 		 [userError, setUserError] = useState("") 
 		 
@@ -43,6 +42,7 @@ function Signup() {
 		};
 		
 					const dbUrl = async() => {
+						//eslint-disable-next-line
 						const response = await axios({
 							method: "post",
 							headers: { 'Content-Type' : 'application/json'},
@@ -98,7 +98,7 @@ function Signup() {
 						<Form.Group controlId="formBasicEmail" id="form-group-signup-email">
 							<Form.Label>Email</Form.Label>
 							<Form.Control type="email" placeholder="Enter email" onChange={ e=> setUser(e.target.value)}/>
-								<div className="red"> {error}</div>
+								
 						</Form.Group>
 					</Col>
 					<Col xs={12}>

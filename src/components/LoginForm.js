@@ -4,8 +4,12 @@ import googleLogo from '../image/google_logo.png';
 import '../styles/login.css'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom';
+import { setUser, hideModal } from '../store/actions/authModal' 
+import { useDispatch } from 'react-redux';
+
 
 export default function LoginForm() {
+	const dispatch = useDispatch()
 	const [isloading, loading] = useState(false)
 	const history = useHistory ()
 	const [email, setEmail] = useState()
@@ -19,14 +23,18 @@ export default function LoginForm() {
 		e.preventDefault()
 		loading(true)
 		const dbUser = async() => {
+			//eslint-disable-next-line
 				const response = await axios({
 					method: "post",
 					headers: { 'Content-Type' : 'application/json'},
 					data: info,
 					url: "https://dev-bestops.herokuapp.com/v1/login"
 	}).then(token => {	
+		dispatch(setUser(token.data.data))
 		
+		console.log(token)
 		setTimeout(() => {
+			dispatch(hideModal())
 			setEmail('')
 			setPassword('')
 		history.push('/profile')

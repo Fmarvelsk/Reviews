@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import {Tab, Row, Col, ListGroup, Image} from 'react-bootstrap'
 import Reviews from './Reviews';
-function ProfileInfo(props){
+function UserProfile(){
     const [sort, sortBy ] = useState();
     const handleChange = (e) => {
         sortBy({ value : e.target.value})
     }
     return (
-
          <div className="mt-5">
-           {console.log(props)}
     <div className="profile-name test text-center">
    <div className="profile-name">
-    <h3>{`${props.profile?.user.firstname} ${props.profile?.user.lastname}`}</h3>
+    <h3>Wade Warren</h3>
     <p>Boston, Massachusetts</p>
     </div>
     <div className="lo">
@@ -73,4 +71,4 @@ function ProfileInfo(props){
     )
 }
 
-export default ProfileInfo
+export default UserProfile

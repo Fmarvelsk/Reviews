@@ -3,16 +3,14 @@ import Navbar from './Navbar';
 import Header from './Header';
 import Card from './Cardgrid';
 import Carousel from './Carousel';
-//import Footer from './Footer';
 import { useStateValue } from '../StateProvider';
-// import Profile from './Profile';
-import { Button, Row } from 'react-bootstrap';
-import Cards from './EventCard'
+import { Button} from 'react-bootstrap';
 import { useRouteMatch, Switch, Route } from 'react-router-dom';
 import Login from './Login';
 import SignUp from './Signup';
 
 export default function Landing() {
+	//eslint-disable-next-line
 	const [{reviews}, dispatch] = useStateValue()
 	//eslint-disable-next-line
 	const { path, url } = useRouteMatch();

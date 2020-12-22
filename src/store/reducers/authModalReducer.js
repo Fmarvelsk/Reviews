@@ -3,7 +3,8 @@ import { SHOW_MODAL_LOGIN, HIDE_MODAL, SHOW_MODAL_SIGNUP, SET_USER } from '../ac
 const initialState = {
 	show: false,
 	loginPage: true,
-	user : {}
+	user : null,
+	Authenticated : false
 };
 
 const authModalReducer = (state = initialState, action) => {
@@ -28,7 +29,8 @@ const authModalReducer = (state = initialState, action) => {
 			case SET_USER :
 				return {
 					...state,
-					user: action.user
+					user: action.payload,
+					Authenticated : true
 				}
 
 		default:

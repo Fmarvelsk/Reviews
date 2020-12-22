@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux'
 import SearchIcon from '@material-ui/icons/Search'
 
 function Navigation() {
-
+	
 
 	const dispatch = useDispatch()
 
@@ -41,14 +41,14 @@ function Navigation() {
 						</Nav.Link>
 					</Nav>
 					<div className="mr-auto">
-						<a className=" mr-3"><SearchIcon/></a>
+						<div className="colors mr-3"><SearchIcon/></div>
 					</div>
 					<br />
 
-					<div className="">
-						<a className=" mr-3 log-btn" onClick={showModalLoginHandler}>
+					<div>
+						<div className="colors mr-3 log-btn" onClick={showModalLoginHandler}>
 							Login
-						</a>
+						</div>
 					</div>
 					<br />
 					<Nav.Item className="btn-primary mr-3 login-btn" onClick={showModalSignupHandler}>

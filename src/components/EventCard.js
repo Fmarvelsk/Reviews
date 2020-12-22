@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
-import Photo2 from '../image/photoEvent.jpg';
+import { Col, Card } from 'react-bootstrap';
 import moment from 'moment'
 import Rating from './Rating'
 function EventCard (props){

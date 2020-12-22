@@ -1,13 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import {
-  CircularProgressbar,
-  CircularProgressbarWithChildren,
-  buildStyles
-} from "react-circular-progressbar";
+import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-
-import Photo2 from '../image/photoEvent.jpg';
 import moment from 'moment'
 import Rating from './Rating'
 import '../Card.css'

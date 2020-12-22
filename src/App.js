@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import $ from 'jquery';
 import 'react-bootstrap';
 import './App.css';
@@ -10,8 +10,10 @@ import WriteReview from './components/WriteReviews';
 import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
-import Spinner from './components/Spinner'
+//import Spinner from './components/Spinner'
+import NotFound from './components/404'
 import axios from 'axios'
+import Unauthorized from './components/Unathorized'
 import { useStateValue } from './StateProvider'
 import BusinessPage from './components/BusinessPage'
 import Footer from './components/Footer'
@@ -22,6 +24,7 @@ function App() {
 	//const [loading, setLoading ] = useState()
 	useEffect(() => {
 	const dbUrl = async() => {
+		//eslint-disable-next-line
 			const response = await axios({
 				method: "GET",
 				url: "https://dev-bestops.herokuapp.com/v1/business"
@@ -34,6 +37,7 @@ function App() {
 			
 		}
 		const dbReview = async () => {
+			//eslint-disable-next-line
 			const recentReviews = await axios({
 				method : 'GET',
 				url : 'https://dev-bestops.herokuapp.com/v1/review/recent'
@@ -49,32 +53,6 @@ function App() {
 		dbUrl()
 		dbReview()
 		
-		$(function() {
-
-			$(".progress-circle").each(function() {
-		  
-			  var value = $(this).attr('data-value');
-			  var left = $(this).find('.progress-circle-left .progress-circle-bar');
-			  var right = $(this).find('.progress-circle-right .progress-circle-bar');
-		  
-			  if (value < 0) {
-				if (value <= 50) {
-				  right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
-				} else {
-				  right.css('transform', 'rotate(180deg)')
-				  left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
-				}
-			  }
-		  
-			})
-		  
-			function percentageToDegrees(percentage) {
-		  
-			  return percentage / 100 * 360
-		  
-			}
-		  
-		  });
 		  $('#recipeCarousel2 .carousel-item').each(function () {
 
 			var next = $(this).next();
@@ -92,6 +70,7 @@ function App() {
 				next.children(':first-child').clone().appendTo($(this));
 			}
 		});
+		//eslint-disable-next-line
 	}, []);
 	return (
 		<>
@@ -101,21 +80,28 @@ function App() {
 					<Landing />
 					<Footer/>
 				</Route>
-				<Route path="/Events">
+				<Route exact path="/Events">
 					<Nav />
 					<EventHeader />
 				</Route>
-				<Route path="/profile">
+				<Route exact path="/profile">
 					<Navbar />
 					<Profile />
 				</Route>
-				<Route path="/writeReview">
+				<Route exact path="/writeReview">
 					<Navbar />
 					<WriteReview />
 				</Route>
-				<Route path="/business">
+				<Route exact path="/business">
 					<Navbar />
 					<BusinessPage/>
+				</Route>
+				<Route exact path="/unathorized">
+				<Unauthorized/>
+				</Route>
+				<Route path="*">
+					<NotFound/>
+					<Footer/>
 				</Route>
 			</Switch>
 			<AuthPage/>

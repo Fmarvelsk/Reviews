@@ -4,6 +4,7 @@ import NavRes from './NavImage';
 import SearchIcon from '@material-ui/icons/Search';
 import '../styles/header.css';
 function Header() {
+	//eslint-disable-next-line
 	const [search, setSearch] = useState()
 	const SearchInfo = (e) => {
 		e.preventDefault()

@@ -5,8 +5,9 @@ import photo2 from '../image/photo5802.jpg';
 import photo3 from '../image/photo5807.jpg';
 
 export default function CarouselBusiness() {
+	//eslint-disable-next-line
 	const [index, setIndex] = useState(0);
-
+ //eslint-disable-next-line
 	const handleSelect = (selectedIndex, e) => {
 		setIndex(selectedIndex);
 	};
