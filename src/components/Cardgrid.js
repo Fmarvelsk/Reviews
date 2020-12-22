@@ -5,8 +5,7 @@ import "react-circular-progressbar/dist/styles.css";
 import moment from 'moment'
 import Rating from './Rating'
 import '../Card.css'
-
-
+import { Link } from 'react-router-dom'
 function Percentage(percentage){
   return percentage * 100/5
 }
@@ -37,6 +36,7 @@ function Cardgrid (props){
 
               { card.bus.map( (res, i)=> (
                 <div key={i}>
+                  
                 <Example label={res.name} description={res.details}>
                 <CircularProgressbar value={Percentage(card.average)} text={`${Percentage(card.average)}%`} />
                 <div className="pos-side">

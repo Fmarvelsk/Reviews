@@ -34,3 +34,11 @@ code {
   box-sizing: border-box;
   /* color: white; */
 }
+.inputsearch{
+  width: 0;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+.inputsearch:focus {
+  width: 250px;
+}

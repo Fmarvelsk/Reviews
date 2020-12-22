@@ -4,30 +4,32 @@ import Header from './Header';
 import Card from './Cardgrid';
 import Carousel from './Carousel';
 import { useStateValue } from '../StateProvider';
-import { Button} from 'react-bootstrap';
+import Spinner from './Spinner';
 import { useRouteMatch, Switch, Route } from 'react-router-dom';
 import Login from './Login';
 import SignUp from './Signup';
 
 export default function Landing() {
 	//eslint-disable-next-line
-	const [{reviews}, dispatch] = useStateValue()
+	const [{reviews, loading}, dispatch] = useStateValue()
 	//eslint-disable-next-line
 	const { path, url } = useRouteMatch();
-	const [hideCard, showCard] = useState(true);
+	//const [hideCard, showCard] = useState(true);
 	return (
 		<>
-			<Navbar />
+		<Navbar />
 			<Header />
 			<div className="body_page">
 				<div className="card-bottom">
-					<div className="postion-center">
+				
+		{ loading ? (<Spinner/>) : (<>
+			<div className="postion-center">
 						<h3>Recent Reviews</h3>
 						</div>
 					
     					<Card recent={reviews}
 						/>
-					<div className="load-btn">
+				{/*	<div className="load-btn">
 						<Button
 							onClick={() => {
 								showCard(!hideCard);
@@ -35,14 +37,16 @@ export default function Landing() {
 						>
 							{hideCard ? 'Show Less' : 'Load More'}
 						</Button>
-					</div>
-				</div>
+					</div>/** */}
+	
+</>) }
+</div>
 				<Carousel />
 			</div>
 			<Switch>
 				<Route path={`${path}/:login`} component={Login} />
 				<Route path={`${path}/signup`} component={SignUp} />
 			</Switch>
-		</>
+					</>
 	);
 }

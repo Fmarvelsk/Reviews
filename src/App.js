@@ -10,7 +10,6 @@ import WriteReview from './components/WriteReviews';
 import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
-//import Spinner from './components/Spinner'
 import NotFound from './components/404'
 import axios from 'axios'
 import Unauthorized from './components/Unathorized'
@@ -23,19 +22,7 @@ function App() {
 	const [{loading, reviews}, dispatch] = useStateValue()
 	//const [loading, setLoading ] = useState()
 	useEffect(() => {
-	const dbUrl = async() => {
-		//eslint-disable-next-line
-			const response = await axios({
-				method: "GET",
-				url: "https://dev-bestops.herokuapp.com/v1/business"
-
-			}).then( response => response.json())
-			.then( res => dispatch({
-				type:'Update reviews',
-				business : res.data
-			})).catch( err => (err))
-			
-		}
+	
 		const dbReview = async () => {
 			//eslint-disable-next-line
 			const recentReviews = await axios({
@@ -50,7 +37,6 @@ function App() {
 			
 		}).catch( err => err)
 		}
-		dbUrl()
 		dbReview()
 		
 		  $('#recipeCarousel2 .carousel-item').each(function () {

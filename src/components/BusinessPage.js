@@ -1,19 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from './CarouselBusiness';
 import { Container, Row, Col, Dropdown, Alert } from 'react-bootstrap';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import '../styles/businessPage.css';
+import axios from 'axios';
 import Phone from '../image/call.svg'
+import { useStateValue } from '../StateProvider'
 import Loc from '../image/location.svg'
 import Review from './Review'
 
-
 export default function BusinessPage() {
+	const [{business}, dispatch] = useStateValue()
+	useEffect( () => {
+		const dbUrl = async() => {
+			//eslint-disable-next-line
+				const response = await axios({
+					method: "GET",
+					url: "https://dev-bestops.herokuapp.com/v1/business"
+	
+				})
+				.then( res => {
+					console.log(res)
+					dispatch({
+					type:'Update reviews',
+					business : res.data
+				})}).catch( err => (err))
+				
+			}
+			dbUrl()
+	}, [])	
 	const [sorting, setSorting] = useState('Rating');
 	const percentage = 87;
 	return (
 		<>
+{console.log(business)}
 			<div style={{ marginTop: '3rem' }}>
 				<Carousel />
 			</div>

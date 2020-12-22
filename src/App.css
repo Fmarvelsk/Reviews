@@ -604,6 +604,7 @@ font-size: 12px;
 .card-review {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .diff {
   display: flex;
