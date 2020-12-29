@@ -117,12 +117,18 @@ line-height: 21px;
 }
 .dl{
   position: absolute;
-  top: 20px;
-  right: -20px;
-  height: 39px;
+  top: 19px;
+  right: 0;
+  outline: none;
+  border: none;
+  height: 40px;
   color: #E3E2E2;
   border-radius: 0px 15px 15px 0px;
   background: #000032;
+}
+.mr-sm-2.form-control:focus {
+  box-shadow: none !important;
+  border: none !important;
 }
 .navbar-dark .navbar-nav .active>.nav-link, .nav-link.active, .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
   color: #ffffff !important;

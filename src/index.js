@@ -14,15 +14,14 @@ import reducer, { initialState } from './reducer';
 const store = configureStore();
 
 ReactDOM.render(
-	<React.StrictMode>
+	
 		<StateProvider initialState={initialState} reducer={reducer}>
 		<Provider store={store}>
 			<BrowserRouter>
 				<App />
 			</BrowserRouter>
 		</Provider>
-		</StateProvider>
-	</React.StrictMode>,
+		</StateProvider>,
 	document.getElementById('root')
 );
 serviceWorker.unregister();

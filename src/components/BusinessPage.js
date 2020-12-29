@@ -29,6 +29,7 @@ export default function BusinessPage() {
 				
 			}
 			dbUrl()
+		//eslint-disable-next-line
 	}, [])	
 	const [sorting, setSorting] = useState('Rating');
 	const percentage = 87;

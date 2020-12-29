@@ -4,10 +4,8 @@ import 'react-bootstrap';
 import './App.css';
 import Landing from './components/Landing';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import EventHeader from './components/Events';
 import Profile from './components/Profile';
 import WriteReview from './components/WriteReviews';
-import Nav from './components/EventNav'
 import Navbar from './components/Navbar'
 import AuthPage from './components/AuthPage'
 import NotFound from './components/404'
@@ -65,10 +63,6 @@ function App() {
 				<Route exact path="/">
 					<Landing />
 					<Footer/>
-				</Route>
-				<Route exact path="/Events">
-					<Nav />
-					<EventHeader />
 				</Route>
 				<Route exact path="/profile">
 					<Navbar />

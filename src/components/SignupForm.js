@@ -18,7 +18,7 @@ function Signup() {
 		 
 		 
 		const validatePassword = (e) => {
-			const patt =new RegExp('^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,20}$')
+			const patt =new RegExp('^(?=.*[A-Za-z])(?=.*)[A-Za-z]{6,20}$')
 			if(e.target.value === undefined || e.target.value === '' || patt.test(e.target.value) || e.target.value.length < 6){
 				setErrorPassword("Password needs 6-20 characters with at least one number")
 					
