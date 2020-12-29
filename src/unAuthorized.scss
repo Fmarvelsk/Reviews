@@ -18,16 +18,6 @@ $fire-reverse:#EFAC41, #DE8531, #6C1305, black;
   }
 }
 
-body {
-  background-color: $black;
-  color: $white;
-  text-align: center;
-  font-family: "Open Sans";
-  font-size: 1.3rem;
-  h1 {
-    font-size: 2.5rem;
-  }
-}
 
 .message {
   max-width: 700px;
@@ -41,7 +31,7 @@ body {
   margin: 0 auto;
   top: 1rem;
   animation: floating 1s infinite alternate ease-in-out;
-  div {
+  .e {
     position: absolute;
   }
 
