@@ -146,6 +146,7 @@ line-height: 21px;
 }
 .carousel-text {
   text-align: center;
+  font-size: 14px;
 }.carousel-inner.vv-3 .carousel-item.active,
 .carousel-inner.vv-3 .carousel-item-next,
 .carousel-inner.vv-3 .carousel-item-prev {

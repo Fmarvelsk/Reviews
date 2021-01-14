@@ -83,6 +83,9 @@ letter-spacing: 0em;
 text-align: center;
 
 }
+.review-h3 {
+    width: 100%;
+}
 .guide:hover {
     color:#007bff !important;
 }

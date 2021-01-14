@@ -15,7 +15,6 @@ function CarouselSlide() {
 				<div className="col-md-12 mb-3">
 					<div className="container text-center my-3 mb-5">
 						<h2 className="font-color">Top Business</h2>
-						<hr className="mb-4 mt-0 d-inline-block mx-auto hr-style-top" />
 						<div className="row mx-auto my-auto">
 							<div
 								id="recipeCarousel2"
