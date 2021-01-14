@@ -4,6 +4,7 @@
  body {
   font-family: Arial, Helvetica, "Roboto", sans-serif;
     font-weight: 300;
+    font-size: 14px;
 }
 
 .bg {
@@ -11,7 +12,6 @@
   font-weight: 700;
   padding-right: .5rem;
   padding-left: .5rem;
-  display: block;
     padding: .5rem 1rem;
 }
 .navbar-color .nav-link {
@@ -210,9 +210,14 @@ ol, ul {
 }
 .font-color {
   color: #01579B;
-  font-family: sen;
+  font-family: Aladin;
+  font-size: 36px;
+  text-decoration: underline;
+  font-style: normal;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: center;
   font-weight: bold;
-
 }
 .fabc {
   color: #4267B2;
@@ -225,10 +230,6 @@ ol, ul {
 }
 .fabi {
   color: #3f729b;
-}
-.hr-style-top {
-  background-color: #1111cc;
-  width: 20%;
 }
 .dark-color {
  color:black !important;
@@ -444,12 +445,6 @@ transform: scale(0.69, 0.69);
   transform: scale(0.80, 0.80);
   opacity: 44%;
 }
-.hr-event {
-  margin-top: 20px;
-  
-  background: #01579B;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-}
 .upcoming > h3{
   padding-left: 10px;
 font-weight: 500;
@@ -605,7 +600,7 @@ h2 {
 }
 .pos-side {
 opacity: 0.8;
-font-size: 12px;  
+font-size: 14px;  
 }
 .card-review {
   display: flex;

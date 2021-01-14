@@ -21,6 +21,7 @@ function CarouselSlide() {
 								id="recipeCarousel2"
 								className="carousel slide w-100 "
 								data-ride="carousel"
+								data-interval= "1500"
 							>
 								<div className="carousel-inner w-100 vv-3" role="listbox">
 									<div className="carousel-item active">
