@@ -48,8 +48,8 @@ function Cardgrid (props){
               </Example>
             
    <div>
-   <p><b>Opening Hours</b>: {res.time}</p>
-   <p><b>Special Treat </b>: Cocktail with chicken wings</p>
+   <p><span className="text-bold">Opening Hours:</span> {res.time}</p>
+   <p><span className="text-bold">Special Treat :</span> Cocktail with chicken wings</p>
  </div>
  </div>      
               ))}
@@ -65,7 +65,7 @@ function Cardgrid (props){
       </div>
      </div>
     
-    <div className="diffs">{moment(card.review[0].createdAt).format("YYYY/MM/DD")}</div>
+    <div>{moment(card.review[0].createdAt).format("YYYY/MM/DD")}</div>
     
   </div>
   

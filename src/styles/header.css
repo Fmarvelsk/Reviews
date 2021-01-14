@@ -22,6 +22,7 @@
   .background-image {
     height: 100%
   }
+
 }
 @media only screen and (max-width: 425px){
     .background-image{
@@ -29,6 +30,9 @@
         backdrop-filter: 25px;
         
         /* background-size: contain; */
+    }
+    .card-review{
+      flex-wrap: wrap;
     }
 }
 .h2t{

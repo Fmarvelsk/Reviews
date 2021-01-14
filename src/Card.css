@@ -45,10 +45,6 @@ text-decoration: underline;
 .footer-review:last-child {
     border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
 }
-.diffs {
-    position: relative;
-    left: 15px;
-}
 @media (max-width : 768px){
     .card-deck-rev {
             padding: 20px;

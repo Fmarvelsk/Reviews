@@ -50,7 +50,7 @@
 .postion-center > h3 {
   font-family: Roboto;
 font-style: normal;
-font-weight: normal;
+font-weight: 300;
 font-size: 25px;
 line-height: 29px;
 text-align: center;
@@ -611,7 +611,7 @@ font-size: 14px;
 .card-review {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  
 }
 .diff {
   display: flex;
