@@ -7,7 +7,7 @@ function Recent(){
         <div className="recent-view-data mt-3">
                 <img src={Pain} className="recent-review-img" alt="avatar" />
                 <div className="header-recent">
-                    <p className="p-header">
+                    <p className="p-header rctxt">
                         Robert Fox
                     </p>
                     <p>Rating Star</p>

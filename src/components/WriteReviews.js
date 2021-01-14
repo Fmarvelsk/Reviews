@@ -2,6 +2,7 @@ import React from 'react';
 import Recent from './Recent'
 import Photo1 from '../image/photo580.jpg';
 import { Row, Col } from 'react-bootstrap';
+import {Link } from 'react-router-dom'
 //import axios from 'axios'
 function ReviewBusiness (){
     const SendReviews = async (e)=> {
@@ -26,9 +27,10 @@ function ReviewBusiness (){
                         <div className="mt-3">
                         <h4>Rate your experience</h4>
                         <p>Rating</p>
-
+                            <div className="sd mb-2">
                         <p className="tell v"><b>Tell your story</b></p><br/>
-                        
+                        <Link to="/guideline" className="guide">Read our review guidelines</Link>
+                        </div>
                         <textarea placeholder="Tell us your story, Explain what happened and avoid using offensive words. Keep your feedback honest, helpful and constructive.">
                             
                         </textarea>
@@ -41,7 +43,7 @@ function ReviewBusiness (){
                     </form>
                 </Col>
                 <Col md={4} xs={12} className="recent-review mt-5">
-                   <p className="text-center mt-3 v">Recent views</p>
+                   <p className=" mt-3 rctxt v">Recent views</p>
                    <Recent/>
                     <Recent/>
                     <Recent/>

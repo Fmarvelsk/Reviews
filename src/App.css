@@ -208,6 +208,17 @@ ol, ul {
 .page-footer {
   background: linear-gradient(180deg, #FFFFFF 0%, #E3E2E2 38.46%, #AEAAAA 100%);;
 }
+.rctxt {
+    text-align: center!important;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
 .font-color {
   color: #01579B;
   font-family: Aladin;
@@ -298,9 +309,6 @@ background-color: #ffffff;
   top: 90px;
     left: 160px;
 }
-.p-header{
-  margin-bottom: 0px !important;
-}
 .space {
   padding: 20px;
   background: #FFFFFF;
@@ -382,9 +390,6 @@ border-radius: 15px;
 .tell{
   margin-bottom: 0px !important;
 }
-.v {
-  text-decoration: underline;
-}
 .test{
   display: flex;
   justify-content: space-around;
@@ -455,6 +460,7 @@ color: #B71C1C;
 .p-header{
   position: relative;
   width: 100%;
+  margin-bottom: 0 !important;
 }
 .create {
   position: absolute;
