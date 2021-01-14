@@ -22,7 +22,7 @@ function Navigation() {
 	return (
 		<>
 			<Navbar className="bg" variant="dark" expand="lg" fixed="top">
-				<Navbar.Brand href="/">Navbar</Navbar.Brand>
+				<Navbar.Brand href="/">BestOption</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto mr-auto navbar-color">

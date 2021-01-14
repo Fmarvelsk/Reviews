@@ -15,14 +15,6 @@
 	border: 2px solid rgb(21, 81, 131);
 }
 
-#form-group-login-password {
-	/* margin-bottom: 0; */
-}
-
-#form-group-signup-email{
-    /* margin-bottom: 0; */
-}
-
 #forgot-password {
 	text-decoration: underline;
 	text-align: right;
