@@ -4,7 +4,7 @@ const initialState = {
 	show: false,
 	loginPage: true,
 	user : null,
-	Authenticated : false
+	
 };
 
 const authModalReducer = (state = initialState, action) => {
@@ -30,7 +30,6 @@ const authModalReducer = (state = initialState, action) => {
 				return {
 					...state,
 					user: action.payload,
-					Authenticated : true
 				}
 
 		default:

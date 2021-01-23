@@ -59,21 +59,19 @@ function App() {
 	return (
 		<>
 			<Router>
+				<Navbar/>
 			<Switch>
 				<Route exact path="/">
 					<Landing />
 					<Footer/>
 				</Route>
 				<Route exact path="/profile">
-					<Navbar />
 					<Profile />
 				</Route>
 				<Route exact path="/writeReview">
-					<Navbar />
 					<WriteReview />
 				</Route>
 				<Route exact path="/business">
-					<Navbar />
 					<BusinessPage/>
 				</Route>
 				<Route exact path="/unathorized">

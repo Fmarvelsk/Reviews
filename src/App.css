@@ -252,11 +252,38 @@ ol, ul {
 .margin-row {
   margin-left: 0px !important;
   margin-right: 0px !important;
+  position: relative;
+    top: -60px;
+}
+@media(max-width:620px){
+  .margin-row{
+    top: -200px;
+  }
+  .display {
+    flex-direction: column;
+  }
+  .rounded-image{
+    left: 0;
+    width: 180px !important;
+    height: 165px !important;
+  }
+  .col-color{
+    margin-right: 0 !important;
+  }
+  .grop {
+    margin-top: 12rem !important;
+    
+  }
+}
+.profile-image{
+  position: relative;
+}
+@media(min-width:768px){
+  .profile-image{
+    left: -27px;
+  }
 }
 .profile-name {
-  position: absolute;
-  bottom: 10px;
-  right: 26%;
   text-transform: capitalize;
 }
 
@@ -264,16 +291,14 @@ ol, ul {
   background-color: #ffffff;
   margin-right: 15px;
 }
-.list-group {
-  margin-top: 7rem !important;
+.grop {
+  margin-top: 4rem ;
   padding: 20px 40px !important;
 }
 .rounded-image {
-  width: 260px;
-  height: auto;
-    position: absolute;
-    top: -160px;
-    left: 80px;
+  width: 231px;
+  height: 218px;
+  border-radius: 50%;
 }
 .review-group{
   position: relative;
@@ -554,54 +579,11 @@ color: #ffffff;
 }
 }
 
-@media only screen and (max-width: 1024px){
-  .rounded-image {
-    left: 33px;
-  }
-}
-@media only screen and (max-width: 768px){
-  .rounded-image {
-    width: 160px;
-    top: -115px;
-  }
-     .list-group{
-      margin-top: 5rem !important;
-      padding: 0 !important;
-  }
-  .profile-name {
-    bottom: 0px;
-  }
-}
 @media only screen and (max-width: 620px){
-  .profile-name {
-    bottom: -70px;
-    z-index: 1;
-  }
-  
-h2 {
-  font-size: 1rem !important;
-}
-  .list-group {
-    margin-top: 8rem !important;
-    padding: 40px!important;
-  }
-  .rounded-image {
-    left: 110px;
-    top: -100px;
-  }
+ 
   .lo {
     bottom: -36px;
     right: 0;
-  }
-}
-@media only screen and (max-width:382px) {
-  .profile-name {
-    right: 16%;
-  }
-}
-@media only screen and (max-width: 390px){
-  .rounded-image {
-    left: 90px;
   }
 }
 .pos-side {

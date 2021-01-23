@@ -3,12 +3,12 @@ import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import { showModalLogin, showModalSignup } from '../store/actions/authModal'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import SearchIcon from '@material-ui/icons/Search'
 
 function Navigation() {
 	
-
+	const authUser = useSelector( (state) => state.authModalReducer)
 	const dispatch = useDispatch()
 
 	const showModalLoginHandler = () => {
@@ -23,18 +23,24 @@ function Navigation() {
 		<>
 			<Navbar className="bg" variant="dark" expand="lg" fixed="top">
 				<Navbar.Brand href="/">BestOption</Navbar.Brand>
+				{authUser.user ? (<div>
+
+					{authUser.user.email}
+				</div>) : 
+				(<>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto mr-auto navbar-color">
 						<Nav.Link className="mr-3" href="/">
 							Home
 						</Nav.Link>
+
 						<NavDropdown className="mr-3" title="Caterigories" id="basic-nav-dropdown">
-							<NavDropdown.Item className ="dark-color" href="#action/3.1">Home Services</NavDropdown.Item>
-							<NavDropdown.Item className ="dark-color" href="#action/3.2">Housing Painting</NavDropdown.Item>
-							<NavDropdown.Item className ="dark-color" href="#action/3.3">Gym</NavDropdown.Item>
+							<NavDropdown.Item className ="dark-color" href="">Home Services</NavDropdown.Item>
+							<NavDropdown.Item className ="dark-color" href="">Housing Painting</NavDropdown.Item>
+							<NavDropdown.Item className ="dark-color" href="">Gym</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item className ="dark-color" href="#action/3.4">Hotels</NavDropdown.Item>
+							<NavDropdown.Item className ="dark-color" href="">Hotels</NavDropdown.Item>
 						</NavDropdown>
 						<Nav.Link className="mr-3" href="/">
 							Reviews
@@ -56,7 +62,8 @@ function Navigation() {
 					</Nav.Item>
 
 					<div></div>
-				</Navbar.Collapse>
+				</Navbar.Collapse> </>) }
+				
 			</Navbar>
 
 		</>

@@ -4,17 +4,19 @@ import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
 import axios from 'axios'
 import { useHistory } from 'react-router-dom';
-
+import { setUser } from '../store/actions/authModal'
+import {useDispatch} from 'react-redux'
 
 function Signup() {
 	const history = useHistory();
-	const [firstname, setUsername] = useState(),
+	const dispatch = useDispatch()
+	const [firstname, setEmailname] = useState(),
 	[isloading, loading] = useState(false),
 		[lastname, setLastname] = useState(),
-		[email, setUser ]  = useState(),
+		[email, setEmail ]  = useState(),
 		 [password, setPassword ] = useState(),
 		 [errorPassword, setErrorPassword] = useState(""),
-		 [userError, setUserError] = useState("") 
+		 [userError, setEmailError] = useState("") 
 		 
 		 
 		const validatePassword = (e) => {
@@ -52,6 +54,8 @@ function Signup() {
 						}).then( response => {
 							setTimeout( () => {
 								setErrorPassword('')
+								loading(false)
+								dispatch(setUser(info))
 								history.push('/profile')
 								
 							}, 2000)
@@ -60,7 +64,7 @@ function Signup() {
 						}).catch(err => 
 							setTimeout( () => {
 								loading(false)
-							setUserError("Email already exist")
+							setEmailError("Email already exist")
 								
 							}, 2000)
 							 
@@ -82,7 +86,7 @@ function Signup() {
 					<Col xs={12} sm={6} md={6}>
 						<Form.Group>
 							<Form.Label>First Name</Form.Label>
-							<Form.Control type="text" placeholder="John" onChange={e => setUsername(e.target.value)} required/>
+							<Form.Control type="text" placeholder="John" onChange={e => setEmailname(e.target.value)} required/>
 						</Form.Group>
 					</Col>
 					<Col xs={12} sm={6} md={6}>
@@ -97,7 +101,7 @@ function Signup() {
 					<Col xs={12}>
 						<Form.Group controlId="formBasicEmail" id="form-group-signup-email">
 							<Form.Label>Email</Form.Label>
-							<Form.Control type="email" placeholder="Enter email" onChange={ e=> setUser(e.target.value)}/>
+							<Form.Control type="email" placeholder="Enter email" onChange={ e=> setEmail(e.target.value)}/>
 								
 						</Form.Group>
 					</Col>

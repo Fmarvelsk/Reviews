@@ -31,8 +31,6 @@ export default function LoginForm() {
 					url: "https://dev-bestops.herokuapp.com/v1/login"
 	}).then(token => {	
 		dispatch(setUser(token.data.data))
-		
-		console.log(token)
 		setTimeout(() => {
 			dispatch(hideModal())
 			setEmail('')
