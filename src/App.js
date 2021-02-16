@@ -32,7 +32,6 @@ function App() {
 				reviews : result.data,
 				
 			})
-			console.log(result)
 		}).catch( err => err)
 		}
 		dbReview()

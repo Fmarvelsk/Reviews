@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import ProfileInfo from './ProfileInfo';
 import Profileuser from './ProfileUser';
 
 function Profile(props){

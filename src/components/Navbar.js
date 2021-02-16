@@ -45,7 +45,7 @@ function Navigation() {
 					<div className="mr-auto">
 						<div className="colors mr-3"><SearchIcon/></div>
 					</div>
-					<br />{console.log(authUser)}
+					<br />
 						
 					{ authUser.user ? 'USer' : (<>
 						<div className="colors mr-3 log-btn" onClick={showModalLoginHandler}>
