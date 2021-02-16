@@ -37,7 +37,6 @@
 }
 }
 .body_page {
-  margin-left: 15px;
   margin-top: 15px;
 }
 
@@ -514,7 +513,7 @@ color: #ffffff;
   position: absolute;
   padding-left: 30px;
   padding-right: 30px;
-  bottom: 50%;
+  bottom: 60%;
   left: -5px;
 }
 .story{

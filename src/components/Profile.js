@@ -6,6 +6,7 @@ import Profileuser from './ProfileUser';
 
 function Profile(props){
     const userProfile = useSelector( state => state.authModalReducer)
+
     useEffect( () => {
         document.body.style.backgroundColor = '#EFEFEF'
       return () => {
@@ -14,9 +15,9 @@ function Profile(props){
     }, [userProfile.user])
     return (
         <>
-        { 
-        <Profileuser/>
-        /*userProfile.user ? (<ProfileInfo profile={userProfile.user}/>) : (<Redirect to={
+        {
+
+        userProfile.user ? (<Profileuser profile={userProfile.user}/>) : (<Redirect to={
             {pathname: '/unathorized',
               state: {
                 from: props.location
@@ -24,7 +25,7 @@ function Profile(props){
            }
               />
         
-          ) */}     
+          )}     
         </>
     )
 }

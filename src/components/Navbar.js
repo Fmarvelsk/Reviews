@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 import { NavDropdown } from 'react-bootstrap';
 import { showModalLogin, showModalSignup } from '../store/actions/authModal'
 import { useDispatch, useSelector } from 'react-redux'
@@ -22,18 +23,13 @@ function Navigation() {
 	return (
 		<>
 			<Navbar className="bg" variant="dark" expand="lg" fixed="top">
-				<Navbar.Brand href="/">BestOption</Navbar.Brand>
-				{authUser.user ? (<div>
-
-					{authUser.user.email}
-				</div>) : 
-				(<>
+				<Link className="navbar-brand" to="/">BestOption</Link>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto mr-auto navbar-color">
-						<Nav.Link className="mr-3" href="/">
+						<Link className="mr-3 nav-link" to="/">
 							Home
-						</Nav.Link>
+						</Link>
 
 						<NavDropdown className="mr-3" title="Caterigories" id="basic-nav-dropdown">
 							<NavDropdown.Item className ="dark-color" href="">Home Services</NavDropdown.Item>
@@ -42,27 +38,30 @@ function Navigation() {
 							<NavDropdown.Divider />
 							<NavDropdown.Item className ="dark-color" href="">Hotels</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link className="mr-3" href="/">
+						<Link className="mr-3 nav-link" to="/business">
 							Reviews
-						</Nav.Link>
+						</Link>
 					</Nav>
 					<div className="mr-auto">
 						<div className="colors mr-3"><SearchIcon/></div>
 					</div>
-					<br />
-
-					<div>
+					<br />{console.log(authUser)}
+						
+					{ authUser.user ? 'USer' : (<>
 						<div className="colors mr-3 log-btn" onClick={showModalLoginHandler}>
 							Login
 						</div>
-					</div>
+				
 					<br />
 					<Nav.Item className="btn-primary mr-3 login-btn" onClick={showModalSignupHandler}>
 						Sign Up
 					</Nav.Item>
 
-					<div></div>
-				</Navbar.Collapse> </>) }
+					</>
+					)
+}
+						
+				</Navbar.Collapse>
 				
 			</Navbar>
 

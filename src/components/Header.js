@@ -24,8 +24,12 @@ function Header() {
     </Form>
 							<NavRes />
 						</div>
+						
 					</div>
 				</Container>
+				<div className="address">Featured restaurant:<br/>
+			<span>Cake’s Delight</span><br/>
+			<span>2464 Royal Ln. Mesa, New Jersey 45463</span></div>
 			</Jumbotron>
 		</>
 	);

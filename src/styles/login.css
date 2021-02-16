@@ -72,4 +72,9 @@
 	.google-button-text img {
 		display: none;
 	}
+}   
+.visiblity{
+position: absolute;
+right: 5px;
+top: 40px;
 }

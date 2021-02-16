@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Tab, Row, Col, ListGroup, Image} from 'react-bootstrap'
 import Reviews from './Reviews';
 function ProfileInfo(props){
@@ -10,6 +10,7 @@ function ProfileInfo(props){
 
          <div className="mt-5">
            {console.log(props)}
+           {console.log(sessionStorage.getItem('user'))}
     <div className="profile-name test text-center">
    <div className="profile-name">
     <h3>{`${props.profile?.user.firstname} ${props.profile?.user.lastname}`}</h3>
@@ -33,13 +34,6 @@ function ProfileInfo(props){
         <ListGroup.Item className="change" action href="#link3">
           Link 3
         </ListGroup.Item>
-        <ListGroup.Item className="change" action href="#">
-          Link 2
-        </ListGroup.Item>
-        <ListGroup.Item className="change" action href="#">
-          Link 2
-        </ListGroup.Item>
-      
       </ListGroup>
     </Col>
     <Col sm={12} md={7} xl={7} className="col-8-color">

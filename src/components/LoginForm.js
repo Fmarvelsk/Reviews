@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Button, Modal, Spinner } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import '../styles/login.css'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom';
@@ -11,10 +13,25 @@ import { useDispatch } from 'react-redux';
 export default function LoginForm() {
 	const dispatch = useDispatch()
 	const [isloading, loading] = useState(false)
-	const history = useHistory ()
+	const history = useHistory()
+	const [type, showType] = useState('Password')
+	const [hide, show] = useState(true)
 	const [email, setEmail] = useState()
 	const [password, setPassword] = useState()
 	const [error, setError] = useState()
+
+	
+	const visiblity = (e) => {
+		e.preventDefault()
+		showType('Text')
+		   show(false)
+	}
+	const hideVisbilty = (e) => {
+		e.preventDefault()
+		showType('Password')
+		show(true)
+	}
+
 	const Signin = (e) => {
 		const info = {
 			email: email,
@@ -31,6 +48,7 @@ export default function LoginForm() {
 					url: "https://dev-bestops.herokuapp.com/v1/login"
 	}).then(token => {	
 		dispatch(setUser(token.data.data))
+		sessionStorage.setItem('user', JSON.stringify(token.data.data))
 		setTimeout(() => {
 			dispatch(hideModal())
 			setEmail('')
@@ -64,13 +82,18 @@ export default function LoginForm() {
 					required/>
 				</Form.Group>
 
-				<Form.Group controlId="formBasicPassword" id="form-group-login-password">
+				<Form.Group controlId="formBasicPassword" id="form-group-login-password" className="recent-view-data">
 					<Form.Label>Password</Form.Label>
 					<Form.Control
-						type="password"
+						type={type}
 						placeholder="Password"
 						onChange = { e => setPassword(e.target.value)}
 					required/>
+						{
+					(hide ? ( <VisibilityOffIcon className="visiblity" onClick={visiblity}/>) : (
+						<VisibilityIcon className="visiblity" onClick={hideVisbilty}/>
+					))
+					}
 				</Form.Group>
 				<Form.Text id="forgot-password">Forgot Password</Form.Text>
 				<div id="login-button-container">

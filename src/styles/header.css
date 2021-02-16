@@ -12,7 +12,7 @@
         
     }
     .imagecaption {
-        bottom: 59%;
+        bottom: 68%;
     }
     .imagecaption > h3 {
         font-size: 34px;
@@ -128,4 +128,18 @@ sup{
 }
 .red {
   color: red;
+}
+.address{
+position: absolute;
+bottom: 0;
+left: 10px;
+color: #fff;
+font-family: Bernard MT Condensed;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: center;
+
 }

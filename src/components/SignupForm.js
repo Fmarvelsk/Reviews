@@ -3,6 +3,8 @@ import { Modal } from 'react-bootstrap';
 import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import googleLogo from '../image/google_logo.png';
 import axios from 'axios'
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { useHistory } from 'react-router-dom';
 import { setUser } from '../store/actions/authModal'
 import {useDispatch} from 'react-redux'
@@ -11,7 +13,9 @@ function Signup() {
 	const history = useHistory();
 	const dispatch = useDispatch()
 	const [firstname, setEmailname] = useState(),
-	[isloading, loading] = useState(false),
+		[isloading, loading] = useState(false),
+		[type, showType] = useState('Password'),
+		[hide, show] = useState(true),
 		[lastname, setLastname] = useState(),
 		[email, setEmail ]  = useState(),
 		 [password, setPassword ] = useState(),
@@ -19,6 +23,18 @@ function Signup() {
 		 [userError, setEmailError] = useState("") 
 		 
 		 
+		 const visiblity = (e) => {
+			e.preventDefault()
+			showType('Text')
+			   show(false)
+		}
+		const hideVisbilty = (e) => {
+			e.preventDefault()
+			showType('Password')
+			show(true)
+		}
+
+	
 		const validatePassword = (e) => {
 			const patt =new RegExp('^(?=.*[A-Za-z])(?=.*)[A-Za-z]{6,20}$')
 			if(e.target.value === undefined || e.target.value === '' || patt.test(e.target.value) || e.target.value.length < 6){
@@ -106,15 +122,20 @@ function Signup() {
 						</Form.Group>
 					</Col>
 					<Col xs={12}>
-						<Form.Group controlId="formBasicPassword" id="form-group-signup-password">
+						<Form.Group controlId="formBasicPassword" id="form-group-signup-password" className="recent-view-data">
 							<Form.Label>Password</Form.Label>
 							<Form.Control
-								type="password"
+								type={type}
 								placeholder="Password"
 								maxLength="20"
 								onChange = {validatePassword}
 								
-								/>
+								/>			
+						{
+					(hide ? ( <VisibilityOffIcon className="visiblity" onClick={visiblity}/>) : (
+						<VisibilityIcon className="visiblity" onClick={hideVisbilty}/>
+					))
+					}
 								<div className="red">{errorPassword}</div>
 						</Form.Group>
 					</Col>
