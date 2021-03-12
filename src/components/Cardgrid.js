@@ -31,7 +31,7 @@ function Cardgrid (props){
          {props.recent?.data?.map( (card, index) =>(
          
         <div className="card-rev" key={index}>
-        <Card.Img variant="top" src={card.bus[0].image} />
+        <img className="grid-img" variant="top" src={card.bus[0].image} />
             <Card.Body>
 
               { card.bus.map( (res, i)=> (

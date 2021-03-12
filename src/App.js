@@ -14,27 +14,41 @@ import Unauthorized from './components/Unathorized'
 import { useStateValue } from './StateProvider'
 import BusinessPage from './components/BusinessPage'
 import Footer from './components/Footer'
+import { useSelector } from 'react-redux';
+import { UserLoggedIn } from './store/actions/authModal'
 
 function App() {
 	//eslint-disable-next-line
 	const [{loading, reviews}, dispatch] = useStateValue()
-	//const [loading, setLoading ] = useState()
-	useEffect(() => {
 	
+	useEffect(() => {
 		const dbReview = async () => {
 			//eslint-disable-next-line
+			const loggedIn = sessionStorage.getItem('token')
+			const loggedUser = sessionStorage.getItem('firstname')
+			const loggedLast = sessionStorage.getItem('lastname')
+			if(loggedIn) {
+				dispatch(UserLoggedIn(loggedIn))
+			}
 			const recentReviews = await axios({
 				method : 'GET',
 				url : 'https://dev-bestops.herokuapp.com/v1/review/recent'
-			}).then ( result => {
+			}).then (result => {
+
+				if (!result){
+					return Promise.reject('error')
+				}
+					else {
 				dispatch({
 				type:'Update reviews',
-				reviews : result.data,
-				
-			})
-		}).catch( err => err)
+				reviews : result.data
+			})}
+		})
+		.catch( err => err)
 		}
+
 		dbReview()
+
 		
 		  $('#recipeCarousel2 .carousel-item').each(function () {
 

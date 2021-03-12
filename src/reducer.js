@@ -1,6 +1,5 @@
 
 export const initialState = {
-    user : [],
     reviews : [],
     business : [],
     loading : true,

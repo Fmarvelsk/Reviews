@@ -4,19 +4,20 @@ import { Redirect } from 'react-router-dom';
 import Profileuser from './ProfileUser';
 
 function Profile(props){
-    const userProfile = useSelector( state => state.authModalReducer)
+    const { user, authenticated } = useSelector( state => state.authModalReducer)
 
     useEffect( () => {
         document.body.style.backgroundColor = '#EFEFEF'
       return () => {
         document.body.style.backgroundColor = ''
       }
-    }, [userProfile.user])
+    }, [user])
     return (
         <>
-        {
-
-        userProfile.user ? (<Profileuser profile={userProfile.user}/>) : (<Redirect to={
+        {console.log(authenticated)}
+        
+            
+        { authenticated ? (<Profileuser profile={user}/>) : (<Redirect to={
             {pathname: '/unathorized',
               state: {
                 from: props.location

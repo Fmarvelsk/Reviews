@@ -58,8 +58,7 @@ function Navigation() {
 					</Nav.Item>
 
 					</>
-					)
-}
+					)}
 						
 				</Navbar.Collapse>
 				

@@ -16,7 +16,8 @@
 }
 .card-rev {
     background-color: rgba(0,0,0,.03);
- 
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     margin-bottom: 3rem;
 
 }
@@ -25,7 +26,14 @@ text-align: center!important;
 text-decoration: underline;
 
 }
-
+.grid-img {
+flex-shrink: 0;
+width: 100%;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+height: 321px;
+object-fit: cover;
+}
 @media (min-width: 768px)
 {
     .card-deck-rev {

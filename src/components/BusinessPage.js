@@ -12,6 +12,8 @@ import Review from './Review'
 
 export default function BusinessPage() {
 	const [{business}, dispatch] = useStateValue()
+	const [sorting, setSorting] = useState('Rating');
+
 	useEffect( () => {
 		const dbUrl = async() => {
 			//eslint-disable-next-line
@@ -31,11 +33,11 @@ export default function BusinessPage() {
 			dbUrl()
 		//eslint-disable-next-line
 	}, [])	
-	const [sorting, setSorting] = useState('Rating');
+	
 	const percentage = 87;
 	return (
 		<>
-{console.log(business)}
+
 			<div style={{ marginTop: '3rem' }}>
 				<Carousel />
 			</div>
