@@ -10,122 +10,31 @@ import Res2 from '../image/Res2.jpg';
 
 function CarouselSlide() {
 	return (
-		<div className="container-carousel mt-5 border-buss">
+		<div className="mt-5 top border-buss">
 			<div className="row">
 				<div className="col-md-12 mb-3">
-					<div className="container text-center my-3 mb-5">
+					<div className="text-center my-3 top-buss mb-5">
 						<h2 className="font-color">Top Business</h2>
-						<div className="row mx-auto my-auto">
-							<div
-								id="recipeCarousel2"
-								className="carousel slide w-100 "
-								data-ride="carousel"
-								data-interval= "1500"
-							>
-								<div className="carousel-inner w-100 vv-3" role="listbox">
-									<div className="carousel-item active">
-										<div className="col-md-3 col-xs-6">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Automate} alt="Auto"
-											/>
-											<p className="carousel-text">Tunscani Motors</p>
-										</div>
-									</div>
-									<div className="carousel-item">
-										<div className="col-md-3 col-xs-6 ">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Event} alt="event"
-											/>
-											<p className="carousel-text">Tunscani Motors</p>
-										</div>
-									</div>
-									<div className="carousel-item">
-										<div className="col-md-3 col-xs-6 ">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Phone2} alt={Phone2}
-											/>
-											<p className="carousel-text">Liberty comms</p>
-										</div>
-									</div>
-									<div className="carousel-item">
-										<div className="col-md-3 col-xs-6 ">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Res} alt={Res}
-											/>
-											<p className="carousel-text">Quench Horse Diner</p>
-										</div>
-									</div>
-									<div className="carousel-item">
-										<div className="col-md-3 col-xs-6 ">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Phone} alt="Phone"
-											/>
-											<p className="carousel-text">Phone World NGN</p>
-										</div>
-									</div>
-									<div className="carousel-item">
-										<div className="col-md-3 col-xs-6 ">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Res2} alt="Res"
-											/>
-											<p className="carousel-text">Liberty Comms</p>
-										</div>
-									</div>
-									<div className="carousel-item">
-										<div className="col-md-3 col-xs-6 ">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Chips} alt="Chips"
-											/>
-											<p className="carousel-text">Liberty Comms</p>
-										</div>
-									</div>
-									<div className="carousel-item">
-										<div className="col-md-3 col-xs-6 ">
-											<img
-												className="d-block img-carousel rounded-circle"
-												src={Shop} alt="Shops"
-											/>
-											<p className="carousel-text">Liberty Comms</p>
-										</div>
-									</div>
-								</div>
-								<a
-									className="carousel-control-prev"
-									href="#recipeCarousel2"
-									role="button"
-									data-slide="prev"
-								>
-									<span
-										className="carousel-control-prev-icon"
-										aria-hidden="true"
-									></span>
-									<span className="sr-only">Previous</span>
-								</a>
-								<a
-									className="carousel-control-next"
-									href="#recipeCarousel2"
-									role="button"
-									data-slide="next"
-								>
-									<span
-										className="carousel-control-next-icon"
-										aria-hidden="true"
-									></span>
-									<span className="sr-only">Next</span>
-								</a>
+						<div className="mx-auto product-slides  my-auto">
+			<div>
+      <ul>
+        <li><img className="prod" src={Phone} /></li>
+        <li><img  className="prod" src={Automate} /></li>
+        <li><img className="prod" src={Res} /></li>
+        <li><img className="prod" src={Event} /></li>
+        <li><img className="prod" src={Phone} /></li>
+        <li><img  className="prod" src={Automate} /></li>
+        <li><img className="prod" src={Res} /></li>
+        <li><img className="prod" src={Event} /></li>
+        {/* <li><img className="prod" src="http://dummyimage.com/600x400/eeeeee/ffffff.png" /></li>
+        <li><img className="prod" src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li> */}
+      </ul>
+    </div>
+    </div>
 							</div>
-						</div>
-					</div>
-				</div>
+							</div>
+										</div>
 			</div>
-		</div>
 	);
 }
 export default CarouselSlide;

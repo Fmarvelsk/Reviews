@@ -44,3 +44,43 @@ a {
   height: 20px;
   border-radius: 50%;
 }
+.prod {
+  display: block;
+  width: 260px;
+  margin: 15px;
+  height: 220px;
+ 
+}
+
+.top-buss {
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-slides {
+  display: flex;
+  width: 200%;
+  margin: 0 -15px;
+  animation: bannermove 10s linear infinite;
+}
+
+article.paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-4*290px));
+  }
+}

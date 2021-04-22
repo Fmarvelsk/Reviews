@@ -1,49 +1,3 @@
-<<<<<<< HEAD
- {props.recent?.data?.map( (card, index) =>(
-        <Col md={6} xl={4} className="mb-3" key={index}>
-        <div className="adjust">
-            <Card.Img variant="top" src={Photo2} />
-            <Card.Body>
-  <div className="progress-circle" data-value='80'>
-      <span className="progress-circle-left">
-                    <span className="progress-circle-bar border-primary"></span>
-      </span>
-      <span className="progress-circle-right">
-                    <span className="progress-circle-bar border-primary"></span>
-      </span>
-      <div className="progress-circle-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-        <div className="h2t font-weight-bold">80<sup className="small">%</sup></div>
-      </div>
-    </div>
-    <div className="post-side">
-   <Card.Title className="text-center v">Chez moi</Card.Title>
-  <Card.Text>
-  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.{' '}
-  
-  </Card.Text>
-  </div>
-  <div>
-    <p><b>Opening Hours</b>: 9:00h - 23:00h</p>
-    <p><b>Special Treat </b>: Cocktail with chicken wings</p>
-  </div>
-</Card.Body>
-<Card.Footer>
-  <div className="c">
-    <img className="size-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx3Zmwl93kSrhaxf7so-usNdWGpNc64aUanA&usqp=CAU" alt='avatar' />
-    <div className="diff">
-      <p className="tell">Savannah Nguyen</p>
-      <span>Stars</span>
-     </div>
-    <div className="diffs">12/02/2020</div>
-  </div>
-  <p>One of the best in town. This is a 5-star restaurant no doubt. Customer service one of the best, food is topnotch</p>
-    
-</Card.Footer>
-</div>
-    </Col>
-    ) )}
-     
-=======
 
 <svg width="1291" height="497" viewBox="0 0 1291 497" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <path d="M0 0H1291V487C1291 492.523 1286.52 497 1281 497H9.99998C4.47714 497 0 492.523 0 487V0Z" fill="url(#pattern0)"/>
@@ -53,4 +7,110 @@
 </pattern>
 </defs>
 </svg>
->>>>>>> ryan
+
+	<div
+								id="recipeCarousel2"
+								className="carousel slide w-100 "
+								data-ride="carousel"
+								data-interval= "100"
+							>
+								<div className="carousel-inner w-100 vv-3" role="listbox">
+									<div className="carousel-item active">
+										<div className="col-md-3 col-xs-6">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Automate} alt="Auto"
+											/>
+											<p className="carousel-text">Tunscani Motors</p>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<div className="col-md-3 col-xs-6 ">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Event} alt="event"
+											/>
+											<p className="carousel-text">Tunscani Motors</p>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<div className="col-md-3 col-xs-6 ">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Phone2} alt={Phone2}
+											/>
+											<p className="carousel-text">Liberty comms</p>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<div className="col-md-3 col-xs-6 ">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Res} alt={Res}
+											/>
+											<p className="carousel-text">Quench Horse Diner</p>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<div className="col-md-3 col-xs-6 ">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Phone} alt="Phone"
+											/>
+											<p className="carousel-text">Phone World NGN</p>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<div className="col-md-3 col-xs-6 ">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Res2} alt="Res"
+											/>
+											<p className="carousel-text">Liberty Comms</p>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<div className="col-md-3 col-xs-6 ">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Chips} alt="Chips"
+											/>
+											<p className="carousel-text">Liberty Comms</p>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<div className="col-md-3 col-xs-6 ">
+											<img
+												className="d-block img-carousel rounded-circle"
+												src={Shop} alt="Shops"
+											/>
+											<p className="carousel-text">Liberty Comms</p>
+										</div>
+									</div>
+								</div>
+								<a
+									className="carousel-control-prev"
+									href="#recipeCarousel2"
+									role="button"
+									data-slide="prev"
+								>
+									<span
+										className="carousel-control-prev-icon"
+										aria-hidden="true"
+									></span>
+									<span className="sr-only">Previous</span>
+								</a>
+								<a
+									className="carousel-control-next"
+									href="#recipeCarousel2"
+									role="button"
+									data-slide="next"
+								>
+									<span
+										className="carousel-control-next-icon"
+										aria-hidden="true"
+									></span>
+									<span className="sr-only">Next</span>
+								</a>
+							</div>
+					

@@ -33,9 +33,7 @@ const authModalReducer = (state = initialState, action) => {
 					user: action.payload,
 					authenticated : true
 				};
-
 				case ACCESS_TOKEN:	
-				console.log(action.payload)
 					return {
 						...state,
 						user : action.payload,

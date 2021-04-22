@@ -22,12 +22,15 @@ function App() {
 	const [{loading, reviews}, dispatch] = useStateValue()
 	
 	useEffect(() => {
+		const myabortController = new AbortController()
+		
 		const dbReview = async () => {
 			//eslint-disable-next-line
 			const loggedIn = sessionStorage.getItem('token')
 			const loggedUser = sessionStorage.getItem('firstname')
 			const loggedLast = sessionStorage.getItem('lastname')
 			if(loggedIn) {
+				console.log(loggedIn)
 				dispatch(UserLoggedIn(loggedIn))
 			}
 			const recentReviews = await axios({
@@ -68,6 +71,7 @@ function App() {
 			}
 		});
 		//eslint-disable-next-line
+		return () => myabortController.abort()
 	}, []);
 	return (
 		<>
@@ -77,7 +81,7 @@ function App() {
 				<Route exact path="/">
 					<Landing />
 					<Footer/>
-				</Route>
+				</Route>  
 				<Route exact path="/profile">
 					<Profile />
 				</Route>
