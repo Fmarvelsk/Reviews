@@ -1,4 +1,4 @@
-import { SHOW_MODAL_LOGIN, HIDE_MODAL, SHOW_MODAL_SIGNUP, SET_USER, ACCESS_TOKEN } from './actionTypes'
+import { SHOW_MODAL_LOGIN, HIDE_MODAL, SHOW_MODAL_SIGNUP, SET_USER, GET_TOKEN } from './actionTypes'
 
 export const showModalLogin = () => {
     return {
@@ -27,7 +27,7 @@ export const setUser = (payload) => {
 
 export const UserLoggedIn = (payload) => {
      return {
-        type : ACCESS_TOKEN,
+        type : GET_TOKEN,
         payload
     }
 }

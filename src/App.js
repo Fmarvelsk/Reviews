@@ -1,5 +1,4 @@
 import React, { useEffect} from 'react';
-import $ from 'jquery';
 import 'react-bootstrap';
 import './App.css';
 import Landing from './components/Landing';
@@ -14,7 +13,6 @@ import Unauthorized from './components/Unathorized'
 import { useStateValue } from './StateProvider'
 import BusinessPage from './components/BusinessPage'
 import Footer from './components/Footer'
-import { useSelector } from 'react-redux';
 import { UserLoggedIn } from './store/actions/authModal'
 
 function App() {
@@ -29,10 +27,11 @@ function App() {
 			const loggedIn = sessionStorage.getItem('token')
 			const loggedUser = sessionStorage.getItem('firstname')
 			const loggedLast = sessionStorage.getItem('lastname')
+
 			if(loggedIn) {
-				console.log(loggedIn)
-				dispatch(UserLoggedIn(loggedIn))
+				dispatch(UserLoggedIn({loggedIn, loggedUser, loggedLast}))
 			}
+			//eslint-disable-next-line
 			const recentReviews = await axios({
 				method : 'GET',
 				url : 'https://dev-bestops.herokuapp.com/v1/review/recent'
@@ -52,28 +51,11 @@ function App() {
 
 		dbReview()
 
-		
-		  $('#recipeCarousel2 .carousel-item').each(function () {
 
-			var next = $(this).next();
-			if (!next.length) {
-				next = $(this).siblings(':first');
-			}
-			next.children(':first-child').clone().appendTo($(this));
-
-			for (var i = 0; i < 4; i++) {
-				next = next.next();
-				if (!next.length) {
-					next = $(this).siblings(':first');
-				}
-
-				next.children(':first-child').clone().appendTo($(this));
-			}
-		});
-		//eslint-disable-next-line
 		return () => myabortController.abort()
-	}, []);
+	}, [dispatch]);
 	return (
+		
 		<>
 			<Router>
 				<Navbar/>
@@ -88,7 +70,7 @@ function App() {
 				<Route exact path="/writeReview">
 					<WriteReview />
 				</Route>
-				<Route exact path="/business">
+				<Route exact path="/business/:businessId">
 					<BusinessPage/>
 				</Route>
 				<Route exact path="/unathorized">

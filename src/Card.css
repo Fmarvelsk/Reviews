@@ -16,8 +16,7 @@
 }
 .card-rev {
     background-color: rgba(0,0,0,.03);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-radius: 12px;
     margin-bottom: 3rem;
 
 }
@@ -93,9 +92,9 @@ text-align: center;
 .guide:hover {
     color:#007bff !important;
 }
-.review-h3 >h3 {
+/*.review-h3 >h3 {
     text-decoration: underline;
-}
+}*/
 .card-body{
     padding: 1rem !important;
 }

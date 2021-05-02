@@ -1,12 +1,12 @@
 import React from 'react';
 import Phone from '../image/phone 3.jpg';
 import Automate from '../image/automobile.jpg';
-import Phone2 from '../image/phone 2.jpg';
+//import Phone2 from '../image/phone 2.jpg';
 import Res from '../image/nmpW_WwwVSc.jpg';
 import Event from '../image/event.jpg';
-import Shop from '../image/Shop.jpg';
-import Chips from '../image/Chips.jpg';
-import Res2 from '../image/Res2.jpg';
+//import Shop from '../image/Shop.jpg';
+//import Chips from '../image/Chips.jpg';
+//import Res2 from '../image/Res2.jpg';
 
 function CarouselSlide() {
 	return (
@@ -18,16 +18,14 @@ function CarouselSlide() {
 						<div className="mx-auto product-slides  my-auto">
 			<div>
       <ul>
-        <li><img className="prod" src={Phone} /></li>
-        <li><img  className="prod" src={Automate} /></li>
-        <li><img className="prod" src={Res} /></li>
-        <li><img className="prod" src={Event} /></li>
-        <li><img className="prod" src={Phone} /></li>
-        <li><img  className="prod" src={Automate} /></li>
-        <li><img className="prod" src={Res} /></li>
-        <li><img className="prod" src={Event} /></li>
-        {/* <li><img className="prod" src="http://dummyimage.com/600x400/eeeeee/ffffff.png" /></li>
-        <li><img className="prod" src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li> */}
+        <li><img className="prod" src={Phone} alt="phone" /></li>
+        <li><img  className="prod" src={Automate} alt="auto"/></li>
+        <li><img className="prod" src={Res} alt="res"/></li>
+        <li><img className="prod" src={Event} alt="event"/></li>
+        <li><img className="prod" src={Phone} alt="phone"/></li>
+        <li><img  className="prod" src={Automate} alt="auto"/></li>
+        <li><img className="prod" src={Res} alt="res"/></li>
+        <li><img className="prod" src={Event} alt="event"/></li>
       </ul>
     </div>
     </div>

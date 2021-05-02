@@ -1,5 +1,4 @@
 import { createStore, combineReducers, compose } from 'redux'
-
 import authModalReducer from './reducers/authModalReducer'
 
 const rootReducer = combineReducers({

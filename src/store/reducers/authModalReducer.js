@@ -1,4 +1,4 @@
-import { SHOW_MODAL_LOGIN, HIDE_MODAL, SHOW_MODAL_SIGNUP, SET_USER, ACCESS_TOKEN } from '../actions/actionTypes';
+import { SHOW_MODAL_LOGIN, HIDE_MODAL, SHOW_MODAL_SIGNUP, SET_USER } from '../actions/actionTypes';
 
 const initialState = {
 	show: false,
@@ -28,18 +28,12 @@ const authModalReducer = (state = initialState, action) => {
 				loginPage: false,
 			};
 			case SET_USER:
+				
 				return {
 					...state,
 					user: action.payload,
 					authenticated : true
 				};
-				case ACCESS_TOKEN:	
-					return {
-						...state,
-						user : action.payload,
-						authenticated : true
-					};
-
 		default:
 			return state;
 	}

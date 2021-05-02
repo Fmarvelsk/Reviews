@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 a {
   color: #ffffff !important;
   text-decoration: none;
@@ -49,7 +49,7 @@ a {
   width: 260px;
   margin: 15px;
   height: 220px;
- 
+ /*margin: 0 35px*/
 }
 
 .top-buss {
@@ -83,4 +83,18 @@ ul {
   100% {
     transform: translateX(calc(-4*290px));
   }
+}
+.h5{
+  color: #01579B;
+  text-decoration: underline;
+}
+.robot {
+  font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
 }

@@ -3,6 +3,7 @@ export const initialState = {
     reviews : [],
     business : [],
     loading : true,
+    byId : []
 }
 
 const reducer = (state, action) => {
@@ -18,6 +19,11 @@ const reducer = (state, action) => {
                  reviews : action.reviews,
                  loading : false
 
+             }
+             case 'getById' : 
+             return {
+                 ...state,
+                 byId : action.business
              }
              case 'Business':
                  return{

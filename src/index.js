@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import { StateProvider } from './StateProvider';
 import reducer, { initialState } from './reducer';
 
+
 const store = configureStore();
 
 ReactDOM.render(

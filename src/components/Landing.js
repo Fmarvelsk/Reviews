@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './Navbar';
 import Header from './Header';
 import Card from './Cardgrid';
 import Carousel from './Carousel';
@@ -17,7 +16,6 @@ export default function Landing() {
 	//const [hideCard, showCard] = useState(true);
 	return (
 		<>
-		<Navbar />
 			<Header />
 			<div className="body_page">
 				<div className="card-bottom">

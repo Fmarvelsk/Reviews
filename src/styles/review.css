@@ -29,5 +29,10 @@
 #review-comment{
     text-overflow: ellipsis;
     overflow: hidden;
+    word-break: break-word;
     /* white-space: wrap; */
+}
+.CircularProgressbar .CircularProgressbar-path{
+    stroke:#01579B !important;
+    ;
 }

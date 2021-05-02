@@ -48,9 +48,9 @@ export default function LoginForm() {
 					url: "https://dev-bestops.herokuapp.com/v1/login"
 	}).then(token => {	
 		dispatch(setUser(token.data.data))
-		sessionStorage.setItem('firstname', JSON.stringify(token.data.data.user.firstname))
-		sessionStorage.setItem('lastname', JSON.stringify(token.data.data.user.lastname))
-		sessionStorage.setItem('token', JSON.stringify(token.data.data.token))
+		sessionStorage.setItem('firstname', token.data.data.user.firstname)
+		sessionStorage.setItem('lastname', token.data.data.user.lastname)
+		sessionStorage.setItem('token', token.data.data.token)
 		setTimeout(() => {
 			dispatch(hideModal())
 			setEmail('')

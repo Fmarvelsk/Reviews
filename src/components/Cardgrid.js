@@ -5,7 +5,8 @@ import "react-circular-progressbar/dist/styles.css";
 import moment from 'moment'
 import Rating from './Rating'
 import '../Card.css'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 function Percentage(percentage){
   return percentage * 100/5
 }
@@ -16,7 +17,8 @@ function Example(props) {
       <div className="rev-cards">
         <div style={{ width: "30%", marginRight:10}}>{props.children}</div>
         <div className="review-h3">
-          <h3 className="h5">{props.label}</h3>
+        <Link to={`/Business/${props.id}`}>
+       <h3 className="h5">{props.label}</h3> </Link>
           <p>{props.description}</p>
         </div>
       </div>
@@ -29,15 +31,14 @@ function Cardgrid (props){
       <div className="card-deck-rev">
         
          {props.recent?.data?.map( (card, index) =>(
-         
         <div className="card-rev" key={index}>
-        <img className="grid-img" variant="top" src={card.bus[0].image} />
+           
+        <img className="grid-img" variant="top" src={card.bus[0].image} alt='business-logo'/>
             <Card.Body>
 
               { card.bus.map( (res, i)=> (
                 <div key={i}>
-                  
-                <Example label={res.name} description={res.details}>
+                  <Example label={res.name} id={res._id} description={res.details}>
                 <CircularProgressbar value={Percentage(card.average)} text={`${Percentage(card.average).toFixed(0)}%`} />
                 <div className="pos-side">
              <p className="tc">Overall score</p>
