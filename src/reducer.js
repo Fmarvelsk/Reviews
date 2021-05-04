@@ -30,6 +30,7 @@ const reducer = (state, action) => {
                      ...state,
                      business : action.business
                  }
+                 
          default :
          return state;
 

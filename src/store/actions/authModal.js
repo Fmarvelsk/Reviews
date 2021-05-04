@@ -26,6 +26,7 @@ export const setUser = (payload) => {
 }
 
 export const UserLoggedIn = (payload) => {
+   
      return {
         type : GET_TOKEN,
         payload
