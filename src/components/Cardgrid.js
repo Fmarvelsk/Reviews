@@ -6,7 +6,6 @@ import moment from 'moment'
 import Rating from './Rating'
 import '../Card.css'
 import { Link } from 'react-router-dom';
-import Skeleton from 'react-loading-skeleton';
 
 
 function Percentage(percentage){
