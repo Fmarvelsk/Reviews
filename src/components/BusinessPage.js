@@ -84,7 +84,7 @@ export default function BusinessPage() {
 									 </span>
 									 <Row style={{ justifyContent : 'space-around', marginTop: '1rem'}}>
 										 <Button className="addPhotos">Add Photos</Button>
-										 <Link className="linkToWrite" to="">Write a Review</Link>
+										 <Link className="linkToWrite" to="/writeReview">Write a Review</Link>
 									 </Row>
 								 </Col>
 							 </Row>

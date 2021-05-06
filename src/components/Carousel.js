@@ -18,14 +18,14 @@ function CarouselSlide() {
 						<div className="mx-auto product-slides  my-auto">
 			<div>
       <ul>
-        <li><img className="prod" src={Phone} alt="phone" /></li>
-        <li><img  className="prod" src={Automate} alt="auto"/></li>
-        <li><img className="prod" src={Res} alt="res"/></li>
-        <li><img className="prod" src={Event} alt="event"/></li>
-        <li><img className="prod" src={Phone} alt="phone"/></li>
-        <li><img  className="prod" src={Automate} alt="auto"/></li>
-        <li><img className="prod" src={Res} alt="res"/></li>
-        <li><img className="prod" src={Event} alt="event"/></li>
+        <li><img className="prod" src={Phone} alt="phone" /><p className="mts">Phone World NGN</p></li>
+        <li><img  className="prod" src={Automate} alt="auto"/><p className="mts">Tuscani Motors</p></li>
+        <li><img className="prod" src={Res} alt="res"/><p className="mts">Quench Resturant</p></li>
+        <li><img className="prod" src={Event} alt="event"/><p className="mts">Quench Horse DIner</p></li>
+        <li><img className="prod" src={Phone} alt="phone"/><p className="mts">Phone World NGN</p></li>
+        <li><img  className="prod" src={Automate} alt="auto"/><p className="mts">Tuscani Motors</p></li>
+        <li><img className="prod" src={Res} alt="res"/><p className="mts">Quench Resturant</p></li>
+        <li><img className="prod" src={Event} alt="event"/><p className="mts">Quench Horse DIner</p></li>
       </ul>
     </div>
     </div>

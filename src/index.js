@@ -4,13 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import { StateProvider } from './StateProvider';
 import reducer, { initialState } from './reducer';
-
+//import { MemoryRouter } from 'react-router-dom'
 
 const store = configureStore();
 

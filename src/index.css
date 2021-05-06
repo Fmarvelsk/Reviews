@@ -46,12 +46,14 @@ a {
 }
 .prod {
   display: block;
-  width: 260px;
-  margin: 15px;
+  /*width: 260px;
+  margin: 15px; */
   height: 220px;
- /*margin: 0 35px*/
+  margin: 0 35px
 }
-
+.mts{
+margin-top: 0.7rem !important;
+}
 .top-buss {
   width: 100%;
   overflow: hidden;
